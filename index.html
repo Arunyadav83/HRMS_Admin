@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smarthr - Bootstrap Admin Template" />
+  <meta name="author" content="Dreamstechnologies - Bootstrap Admin Template" />
+  <title>Login - HRMS admin template</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/key.png" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="account-page">
+  <div class="main-wrapper">
+    <div class="account-content">
+      <div class="container">
+        <div class="account-logo">
+          <a href="admin-dashboard.html">
+            <img src="assets/img/logo.webp" alt="Dreamguy's Technologies" />
+          </a>
+        </div>
+        <div class="account-box">
+          <div class="account-wrapper">
+            <h3 class="account-title">Login</h3>
+            <p class="account-subtitle">Access to our dashboard</p>
+
+            <form id="loginForm">
+              <div class="input-block mb-4">
+                <label class="col-form-label">Email Address</label>
+                <input class="form-control" type="email" id="email" required />
+              </div>
+              <div class="input-block mb-4">
+                <label class="col-form-label">Password</label>
+                <input class="form-control" type="password" id="password" required />
+              </div>
+              <div class="input-block mb-4 text-center">
+                <button class="btn btn-primary account-btn" type="submit">Login</button>
+              </div>
+              <div class="account-footer">
+                <p>Don't have an account yet? <a href="register.html">Register</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript to handle login -->
+  <script>
+    $(document).ready(function () {
+      $('#loginForm').submit(function (event) {
+        event.preventDefault(); // Prevent form submission
+  
+        var email = $('#email').val();
+        var password = $('#password').val();
+  
+        // AJAX request to check credentials
+        $.ajax({
+          url: 'http://localhost/your-backend/login.php', // Replace with your actual backend URL
+          type: 'POST',
+          contentType: 'application/json',
+          data: JSON.stringify({
+            email: email,
+            password: password
+          }),
+          success: function (response) {
+            // Ensure response is parsed as JSON
+            try {
+              var jsonResponse = JSON.parse(response);
+            } catch (e) {
+              alert('Invalid server response: ' + response);
+              return;
+            }
+  
+            if (jsonResponse.status === 'success') {
+              alert('Login successful!');
+              window.location.href = 'admin-dashboard.html'; // Redirect on success
+            } else {
+              alert(jsonResponse.message); // Show error message from the server
+            }
+          },
+          error: function (xhr, status, error) {
+            // Handle server or network errors
+            alert('Error: ' + xhr.responseText);
+          }
+        });
+      });
+    });
+  </script>
+  
+</body>
+
+</html>
