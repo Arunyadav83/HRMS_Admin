@@ -12,24 +12,127 @@
   <title>Employee Profile - HRMS admin template</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/key.png">
-
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-
   <link rel="stylesheet" href="assets/css/line-awesome.min.css">
   <link rel="stylesheet" href="assets/css/material.css">
-
   <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-
   <link rel="stylesheet" href="assets/css/select2.min.css">
-
   <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-
   <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
-
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- Bootstrap CSS -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .edit-icon {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .button-group {
+      display: none;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      background-color: #f9f9f9;
+      padding: 5px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      font-size: 15px;
+    }
+
+    .button-group button {
+      display: block;
+      margin: 3px 0;
+      width: 80px;
+      cursor: pointer;
+      border: none;
+      padding: 5px;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .add-btn {
+      background-color: #76b8eb;
+      min-width: 0px;
+    }
+
+    .edit-btn {
+      background-color: #ffcd71;
+    }
+
+    .delete-btn {
+      background-color: #fc655a;
+    }
+
+    .container:hover .button-group {
+      display: block;
+    }
+
+    .off-canvas {
+      position: fixed;
+      top: 0;
+      right: 100%;
+      width: 300px;
+      height: 100%;
+      background-color: #ffffff;
+      box-shadow: -3px 0 5px rgba(0, 0, 0, 0.5);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .off-canvas.active {
+      right: 0;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 10px;
+      cursor: pointer;
+    }
+
+    .data-list {
+      margin-top: 10px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background-color: #00bfff;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .tosat-alert{
+      position: fixed;
+      top: 50px;
+      right: 0px;
+    }
+.button-inn{
+  display: block !important;
+}
+  </style>
 </head>
 
 <body>
@@ -77,10 +180,6 @@
             </form>
           </div>
         </li>
-
-
-
-
 
         <li class="nav-item dropdown">
           <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -318,7 +417,7 @@
                 <a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
                 <ul>
                   <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                  <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+                  <!-- <li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
 
                 </ul>
               </li>
@@ -353,9 +452,9 @@
                   <li><a href="leaves.html">Leaves (Admin) <span
                         class="badge rounded-pill bg-primary float-end">1</span></a></li>
 
-                  <li><a href="leave-settings.html">Leave Settings</a></li>
-                  <li><a href="attendance.html">Attendance (Admin)</a></li>
-                  <li><a href="attendance-employee.html">Attendance (Employee)</a></li>
+
+                  <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
+                  <!-- <li><a href="attendance-employee.html">Attendance (Employee)</a></li> -->
                   <li><a href="departments.html">Departments</a></li>
                   <li><a href="designations.html">Designations</a></li>
                   <li><a href="timesheet.html">Timesheet</a></li>
@@ -452,7 +551,7 @@
               <a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
               <ul>
                 <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+                <!-- <li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
 
               </ul>
             </li>
@@ -487,9 +586,9 @@
                 <li><a href="leaves.html">Leaves (Admin) <span
                       class="badge rounded-pill bg-primary float-end">1</span></a></li>
 
-                <li><a href="leave-settings.html">Leave Settings</a></li>
-                <li><a href="attendance.html">Attendance (Admin)</a></li>
-                <li><a href="attendance-employee.html">Attendance (Employee)</a></li>
+
+                <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
+                <!-- <li><a href="attendance-employee.html">Attendance (Employee)</a></li> -->
                 <li><a href="departments.html">Departments</a></li>
                 <li><a href="designations.html">Designations</a></li>
                 <li><a href="timesheet.html">Timesheet</a></li>
@@ -817,7 +916,7 @@
               <p>Dashboard</p>
               <ul>
                 <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
+                <!-- <li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
 
               </ul>
             </div>
@@ -858,9 +957,9 @@
                 <li><a href="leaves.html">Leaves (Admin) <span
                       class="badge rounded-pill bg-primary float-end">1</span></a></li>
 
-                <li><a href="leave-settings.html">Leave Settings</a></li>
-                <li><a href="attendance.html">Attendance (Admin)</a></li>
-                <li><a href="attendance-employee.html">Attendance (Employee)</a></li>
+
+                <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
+                <!-- <li><a href="attendance-employee.html">Attendance (Employee)</a></li> -->
                 <li><a href="departments.html">Departments</a></li>
                 <li><a href="designations.html">Designations</a></li>
                 <li><a href="timesheet.html">Timesheet</a></li>
@@ -1145,126 +1244,256 @@
             </div>
           </div>
         </div>
-        <div class="tab-content">
 
+
+        <!-- Toast Container -->
+<div class="tosat-alert end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="d-flex">
+          <div class="toast-body">
+              This is a success message in green!
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+  </div>
+</div>
+
+
+        <div class="tab-content">
           <div id="emp_profile" class="pro-overview tab-pane fade show active">
             <div class="row">
               <div class="col-md-6 d-flex" id="personalInfoForm">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Personal Informations
-                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#personal_info_modal">
-                        <i class="fa-solid fa-pencil"></i>
-                      </a>
+                    <h3 class="card-title">Personal Information
+                      <!-- Edit Button -->
+                      <div class="container">
+                        <a href="#" class="edit-icon">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <div class="button-group">
+                          <div class="button-inn">
+                            <div class="d-flex flex-column" data-bs-toggle="offcanvas" data-bs-target="#personalInfoOffcanvas"
+                            aria-controls="personalInfoOffcanvas">
+                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
+                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
+                            </div>
+                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
+                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
+                          </div>
+                        </div>
+                      </div>
+
                     </h3>
                     <ul class="personal-info">
                       <li>
                         <div class="title">Passport No.</div>
-                        <div class="text">9876543210</div>
+                        <div class="text" id="passportNoDisplay">9876543210</div>
                       </li>
                       <li>
-                        <div class="title">Passport ExpDate.</div>
-                        <div class="text" >9876543210</div>
+                        <div class="title">Passport ExpDate</div>
+                        <div class="text" id="passportExpDateDisplay">01-01-2030</div>
                       </li>
                       <li>
                         <div class="title">Tel</div>
-                        <div class="text" ><a href="#">9876543210</a></div>
+                        <div class="text"><a href="#" id="telephoneDisplay">9876543210</a></div>
                       </li>
                       <li>
                         <div class="title">Nationality</div>
-                        <div class="text" >Indian</div>
+                        <div class="text" id="nationalityDisplay">Indian</div>
                       </li>
                       <li>
                         <div class="title">Religion</div>
-                        <div class="text" >Christian</div>
+                        <div class="text" id="religionDisplay">Christian</div>
                       </li>
                       <li>
                         <div class="title">Marital status</div>
-                        <div class="text" >Married</div>
+                        <div class="text" id="maritalStatusDisplay">Married</div>
                       </li>
                       <li>
                         <div class="title">Employment of spouse</div>
-                        <div class="text" >No</div>
+                        <div class="text" id="employmentOfSpouseDisplay">No</div>
                       </li>
                       <li>
                         <div class="title">No. of children</div>
-                        <div class="text" >2</div>
+                        <div class="text" id="noOfChildrenDisplay">2</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+           
+
+              <div class="col-md-6 d-flex">
+                <div class="card profile-box flex-fill">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      Emergency Contact
+                      <!-- Edit Button -->
+                      <!-- <a href="#" class="edit-icon" data-bs-toggle="offcanvas"
+                        data-bs-target="#emergency_contact_offcanvas" aria-controls="emergency_contact_offcanvas">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a> -->
+                      <div class="container">
+                        <a href="#" class="edit-icon">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <div class="button-group">
+                          <div class="button-inn">
+                            <div class="d-flex flex-column" data-bs-toggle="offcanvas"
+                            data-bs-target="#emergency_contact_offcanvas" aria-controls="emergency_contact_offcanvas">
+                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
+                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
+                            </div>
+                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
+                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </h3>
+
+                    <h5 class="section-title">Primary</h5>
+                    <ul class="personal-info">
+                      <li>
+                        <div class="title">Name</div>
+                        <div class="text text-primary-name" id="primaryNameDisplay">John Doe</div> <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Relationship</div>
+                        <div class="text text-primary-relationship" id="primaryRelationshipDisplay">Father</div>
+                        <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Phone</div>
+                        <div class="text text-primary-phone" id="primaryphoneDisplay">9876543210</div> <!-- Dynamic -->
+                      </li>
+                    </ul>
+
+                    <hr>
+
+                    <h5 class="section-title">Secondary</h5>
+                    <ul class="personal-info">
+                      <li>
+                        <div class="title">Name</div>
+                        <div class="text text-secondary-name " id="secondaryNameDisplay">Karen Wills</div>
+                        <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Relationship</div>
+                        <div class="text text-secondary-relationship" id="secondaryRelationshipDisplay">Brother</div>
+                        <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Phone</div>
+                        <div class="text text-secondary-phone" id="secondaryPhoneDisplay">9876543210</div>
+                        <!-- Dynamic -->
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6 d-flex">
-                <div class="card profile-box flex-fill">
-                  <div class="card-body">
-                    <h3 class="card-title">Emergency Contact <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#emergency_contact_modal"><i class="fa-solid fa-pencil"></i></a></h3>
-                    <h5 class="section-title">Primary</h5>
-                    <ul class="personal-info">
-                      <li>
-                        <div class="title">Name</div>
-                        <div class="text">John Doe</div>
-                      </li>
-                      <li>
-                        <div class="title">Relationship</div>
-                        <div class="text">Father</div>
-                      </li>
-                      <li>
-                        <div class="title">Phone </div>
-                        <div class="text">9876543210, 9876543210</div>
-                      </li>
-                    </ul>
-                    <hr>
-                    <h5 class="section-title">Secondary</h5>
-                    <ul class="personal-info">
-                      <li>
-                        <div class="title">Name</div>
-                        <div class="text">Karen Wills</div>
-                      </li>
-                      <li>
-                        <div class="title">Relationship</div>
-                        <div class="text">Brother</div>
-                      </li>
-                      <li>
-                        <div class="title">Phone </div>
-                        <div class="text">9876543210, 9876543210</div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="row">
               <div class="col-md-6 d-flex" id="bank_information">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Bank information <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#bank_information"><i class="fa-solid fa-pencil"></i></a></h3>
+                    <h3 class="card-title">
+                      Bank Information
+                      <!-- Edit Button -->
+                      <!-- <a href="#" class="edit-icon" data-bs-toggle="offcanvas" data-bs-target="#editBankInfoOffcanvas"
+                        aria-controls="editBankInfoOffcanvas">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a> -->
+                      <div class="container">
+                        <a href="#" class="edit-icon">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <div class="button-group">
+                          <div class="button-inn">
+                            <div class="d-flex flex-column" data-bs-toggle="offcanvas" data-bs-target="#editBankInfoOffcanvas"
+                            aria-controls="personalInfoOffcanvas">
+                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
+                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
+                            </div>
+                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
+                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </h3>
                     <ul class="personal-info">
                       <li>
-                        <div class="title">Bank name</div>
-                        <div class="text">ICICI Bank</div>
+                        <div class="title">Bank Name</div>
+                        <div class="text" id="bankName"></div>
                       </li>
                       <li>
-                        <div class="title">Bank account No.</div>
-                        <div class="text">159843014641</div>
+                        <div class="title">Bank Account No.</div>
+                        <div class="text" id="accountNumber"></div>
                       </li>
                       <li>
                         <div class="title">IFSC Code</div>
-                        <div class="text">ICI24504</div>
+                        <div class="text" id="ifscCode"></div>
                       </li>
                       <li>
                         <div class="title">PAN No</div>
-                        <div class="text">TC000Y56</div>
+                        <div class="text" id="panNumber"></div>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
+              <!-- Offcanvas Component -->
+              <div id="editBankInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1"
+                aria-labelledby="offcanvasLabel" style="width: 50%;">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasLabel">Bank Information</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form id="editBankForm">
+                    <div class="card">
+                      <div class="card-body">
+                        <h3 class="card-title">Bank Information</h3>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="input-block mb-3">
+                              <label class="col-form-label">Bank Name <span class="text-danger">*</span></label>
+                              <input type="text" class="form-control" id="modal-bankName" required>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-block mb-3">
+                              <label class="col-form-label">Bank Account No. <span class="text-danger">*</span></label>
+                              <input class="form-control" type="text" id="modal-accountNumber" required>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-block mb-3">
+                              <label class="col-form-label">IFSC Code <span class="text-danger">*</span></label>
+                              <input class="form-control" type="text" id="modal-ifscCode" required>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="input-block mb-3">
+                              <label class="col-form-label">PAN No <span class="text-danger">*</span></label>
+                              <input class="form-control" type="text" id="modal-panNumber" required>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-              <div id="bank_information" class="modal custom-modal fade" role="dialog">
+                    <div class="bank-details-submit-button">
+                      <button type="button" class="btn btn-primary" id="bank-details-submit-button">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+
+              <div class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -1281,7 +1510,7 @@
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="input-block mb-3">
-                                  <label class="col-form-label">Name <span class="text-danger">*</span></label>
+                                  <label class="col-form-label">Primary secon Name<span class="text-danger">*</span></label>
                                   <input type="text" class="form-control">
                                 </div>
                               </div>
@@ -1297,12 +1526,12 @@
                                   <input class="form-control" type="text">
                                 </div>
                               </div>
-                              <div class="col-md-6">
+                              <!-- <div class="col-md-6">
                                 <div class="input-block mb-3">
                                   <label class="col-form-label">Phone 2</label>
                                   <input class="form-control" type="text">
                                 </div>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -1322,11 +1551,31 @@
               <div class="col-md-6 d-flex">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Family Informations <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#family_info_modal"><i class="fa-solid fa-pencil"></i></a></h3>
-                    <div class="table-responsive">
+                    <h3 class="card-title">Family Informations <!-- Edit Button -->
+                      <!-- <a href="#" class="edit-icon" data-bs-toggle="offcanvas" data-bs-target="#familyInfoOffcanvas"
+                        aria-controls="familyInfoOffcanvas">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a> -->
+                      <div class="container">
+                        <a href="#" class="edit-icon">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        <div class="button-group">
+                          <div class="button-inn">
+                            <div class="d-flex flex-column" data-bs-toggle="offcanvas" data-bs-target="#familyInfoOffcanvas"
+                            aria-controls="personalInfoOffcanvas">
+                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
+                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
+                            </div>
+                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
+                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
+                          </div>
+                        </div>
+                      </div>
+                    </h3>
+                    <div class="">
                       <table class="table table-nowrap">
-                        <thead>
+                        <thead class="Container">
                           <tr>
                             <th>Name</th>
                             <th>Relationship</th>
@@ -1337,11 +1586,11 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Leo</td>
-                            <td>Brother</td>
-                            <td>Feb 16th, 2019</td>
-                            <td>9876543210</td>
-                            <td class="text-end">
+                            <td id="nameDisplay">Leo</td>
+                            <td id="relationshipDisplay">Brother</td>
+                            <td id="birthdayDisplay">Feb 16th, 2019</td>
+                            <td id="phoneDisplay">9876543210</td>
+                            <!-- <td class="text-end">
                               <div class="dropdown dropdown-action">
                                 <a aria-expanded="false" data-bs-toggle="dropdown" class="action-icon dropdown-toggle"
                                   href="#"><i class="material-icons">more_vert</i></a>
@@ -1351,7 +1600,7 @@
                                     Delete</a>
                                 </div>
                               </div>
-                            </td>
+                            </td> -->
                           </tr>
                         </tbody>
                       </table>
@@ -1364,8 +1613,12 @@
               <div class="col-md-6 d-flex">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Education Informations <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#education_info"><i class="fa-solid fa-pencil"></i></a></h3>
+                    <h3 class="card-title">Education Informations <!-- Edit Button -->
+                      <a href="#" class="edit-icon" data-bs-toggle="offcanvas" data-bs-target="#educationInfoOffcanvas"
+                        aria-controls="educationInfoOffcanvas">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </h3>
                     <div class="experience-box">
                       <ul class="experience-list">
                         <li>
@@ -1374,9 +1627,12 @@
                           </div>
                           <div class="experience-content">
                             <div class="timeline-content">
-                              <a href="#/" class="name">International College of Arts and Science (UG)</a>
-                              <div>Bsc Computer Science</div>
-                              <span class="time">2000 - 2003</span>
+                              <a href="#/" class="name" id="institutionDisplay"></a>
+                              <div id="subjectDisplay"></div>
+                              <span class="time"><span id="startDateDisplay"></span> - <span
+                                  id="endDateDisplay"></span></span>
+                              <div id="degreeDisaply"></div>
+                              <div id="gradeDisplay"></div>
                             </div>
                           </div>
                         </li>
@@ -1400,8 +1656,12 @@
               <div class="col-md-6 d-flex">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Experience <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#experience_info"><i class="fa-solid fa-pencil"></i></a></h3>
+                    <h3 class="card-title">Experience <!-- Edit Button -->
+                      <a href="#" class="edit-icon" data-bs-toggle="offcanvas" data-bs-target="#experienceInfoOffcanvas"
+                        aria-controls="experienceInfoOffcanvas">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </h3>
                     <div class="experience-box">
                       <ul class="experience-list">
                         <li>
@@ -1410,8 +1670,11 @@
                           </div>
                           <div class="experience-content">
                             <div class="timeline-content">
-                              <a href="#/" class="name">Web Designer at Zen Corporation</a>
-                              <span class="time">Jan 2013 - Present (5 years 2 months)</span>
+                              <a href="#/" class="name" id="companyNameDisplay"></a>
+                              <div id="locationDisplay"></div>
+                              <div id="jopositionDisplay"></div>
+                              <p class="time"><span id="periodfromDisplay"></span> - <span id="periodtoDisplay"></span>
+                              </p>
                             </div>
                           </div>
                         </li>
@@ -2269,489 +2532,378 @@
         </div>
       </div>
 
-
-      <div id="personal_info_modal" class="modal custom-modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Personal Information</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
+      <!-- Offcanvas Panel for Add/Edit -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="personalInfoOffcanvas"
+        aria-labelledby="personalInfoOffcanvasLabel" style="width: 60%;">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasTitle">Add Personal Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="personalInfoForm">
+           
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Personal Information</h3>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Passport No</label>
-                      <input type="text" class="form-control" id="passportNo">
+                      <label class="col-form-label">Passport No.<span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="passportNoDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Passport Expiry Date</label>
-                      <div class="cal-icon">
-                        <input class="form-control datetimepicker" type="text" id="passportExpirydate">
-                      </div>
+                      <label class="col-form-label">Passport ExpDate <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="passportExpDateDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Tel</label>
-                      <input class="form-control" type="text" id="telephone">
+                      <label class="col-form-label">Tel <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="telephoneDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
                       <label class="col-form-label">Nationality <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="nationality">
+                      <input class="form-control" type="text" id="nationalityDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Religion</label>
-                      <div class="cal-icon">
-                        <input class="form-control" type="text" id="religion">
-                      </div>
+                      <label class="col-form-label">Religion <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="religionDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Marital status <span class="text-danger">*</span></label>
-                      <select class="select form-control" id="maritalStatus">
-                        <option>-</option>
-                        <option>Single</option>
-                        <option>Married</option>
-                      </select>
+                      <label class="col-form-label">maritalStatus <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="maritalStatusDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Employment of spouse</label>
-                      <input class="form-control" type="text" id="employmentOfSpouse">
+                      <label class="col-form-label">Employment of spouse <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="employmentOfSpouseDisplay" required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">No. of children </label>
-                      <input class="form-control" type="text" id="noOfChildren">
+                      <label class="col-form-label">No. of children <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="noOfChildrenDisplay" required>
                     </div>
                   </div>
                 </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary" id="personal-submit-button">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script>
+        function openOffCanvas(mode) {
+          const offcanvasTitle = document.getElementById("offcanvasTitle");
+          const form = document.getElementById("personalInfoForm");
+
+          // Clear the form for new data entry
+          form.reset();
+
+          if (mode === 'add') {
+            offcanvasTitle.textContent = "Add Personal Information";
+          }
+
+          // Show the offcanvas
+          const offcanvas = new bootstrap.Offcanvas(document.getElementById("personalInfoOffcanvas"));
+          offcanvas.show();
+        }
+
+        // Handle form submission
+        document.getElementById('personalInfoForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          // Collect data from the form fields
+          const newData = {
+            primaryName: document.getElementById("primaryName").value,
+            relationship: document.getElementById("relationship").value,
+            phone: document.getElementById("phone").value
+          };
+
+          alert("Data added successfully: " + JSON.stringify(newData));
+
+          // Hide the offcanvas after submission
+          const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('personalInfoOffcanvas'));
+          offcanvas.hide();
+        });
+
+      </script>
+
+
+      <!-- Offcanvas Component -->
+      <div id="familyInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
+        style="width: 50%;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Family Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="familyInfoTableBody">
+            <div class="form-scroll">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Family Member
+                    <a href="javascript:void(0);" class="delete-icon">
+                      <i class="fa-regular fa-trash-can"></i>
+                    </a>
+                  </h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Name <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="familyName" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="relationship" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
+                        <input class="form-control" type="date" id="birthday" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3">
+                        <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                        <input class="form-control" type="text" id="phone" required>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="submit-section">
+              <button type="button" class="btn btn-primary submit-btn2">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
 
 
-      <div id="family_info_modal" class="modal custom-modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"> Family Informations</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-scroll">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Family Member <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                      </div>
+
+      <!-- Offcanvas Component -->
+      <div id="emergency_contact_offcanvas" class="offcanvas offcanvas-end" tabindex="-1"
+        aria-labelledby="offcanvasLabel" style="width: 60%;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Emergency Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="emergency_contact">
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Primary Contact</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Primary Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="primaryName" required>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="primaryRelationship" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="primaryPhone" required>
                     </div>
                   </div>
                 </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">Secondary Contact</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Secondary Name <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="secondaryName" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="secondaryRelationship" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-block mb-3">
+                      <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                      <input class="form-control" type="text" id="secondaryPhone" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
 
 
-      <div id="emergency_contact_modal" class="modal custom-modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Personal Information</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Primary Contact</h3>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control">
-                        </div>
+
+      <!-- Offcanvas Component -->
+      <div id="educationInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
+        style="width: 60%;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Education Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="educationInfo">
+            <div class="form-scroll">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Education Information</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" id="institution" name="institution" required>
+                        <label class="focus-label">Institution</label>
                       </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
-                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" id="subject" name="subject" required>
+                        <label class="focus-label">Subject</label>
                       </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <div class="cal-icon">
+                          <input type="text" class="form-control floating datetimepicker" id="startDate"
+                            name="startDate" required>
                         </div>
+                        <label class="focus-label">Starting Date</label>
                       </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone 2</label>
-                          <input class="form-control" type="text">
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <div class="cal-icon">
+                          <input type="text" class="form-control floating datetimepicker" id="endDate" name="endDate"
+                            required>
                         </div>
+                        <label class="focus-label">Completion Date</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" id="Degree" name="degree" required>
+                        <label class="focus-label">Degree</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" id="Grade" name="grade" required>
+                        <label class="focus-label">Grade</label>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="card">
-                  <div class="card-body">
-                    <h3 class="card-title">Primary Contact</h3>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone 2</label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
 
 
-      <div id="education_info" class="modal custom-modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title"> Education Informations</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-scroll">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Oxford University" class="form-control floating">
-                            <label class="focus-label">Institution</label>
-                          </div>
+
+      <!-- Offcanvas Component -->
+      <div id="experienceInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
+        style="width: 60%;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLabel">Experience Information</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form id="experienceInfo">
+            <div class="form-scroll">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Experience Information
+                    <a href="javascript:void(0);" class="delete-icon">
+                      <i class="fa-regular fa-trash-can"></i>
+                    </a>
+                  </h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" name="companyName" id="companyName"
+                          value="Digital Development Inc" required>
+                        <label class="focus-label">Company Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" name="location" value="United States"
+                          id="location" required>
+                        <label class="focus-label">Location</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <input type="text" class="form-control floating" name="jobPosition" value="Web Developer"
+                          id="jobPosition" required>
+                        <label class="focus-label">Job Position</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <div class="cal-icon">
+                          <input type="text" class="form-control floating datetimepicker" name="periodFrom"
+                            id="periodFrom" value="01/07/2007" required>
                         </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Computer Science" class="form-control floating">
-                            <label class="focus-label">Subject</label>
-                          </div>
+                        <label class="focus-label">Period From</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-block mb-3 form-focus">
+                        <div class="cal-icon">
+                          <input type="text" class="form-control floating datetimepicker" id="periodTo"
+                            value="08/06/2018" required>
                         </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="01/06/2002" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Starting Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="31/05/2006" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Complete Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="BE Computer Science" class="form-control floating">
-                            <label class="focus-label">Degree</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Grade A" class="form-control floating">
-                            <label class="focus-label">Grade</label>
-                          </div>
-                        </div>
+                        <label class="focus-label">Period To</label>
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Oxford University" class="form-control floating">
-                            <label class="focus-label">Institution</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Computer Science" class="form-control floating">
-                            <label class="focus-label">Subject</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="01/06/2002" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Starting Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="31/05/2006" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Complete Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="BE Computer Science" class="form-control floating">
-                            <label class="focus-label">Degree</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Grade A" class="form-control floating">
-                            <label class="focus-label">Grade</label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
-                    </div>
-                  </div>
                 </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
-                </div>
-              </form>
+              </div>
             </div>
-          </div>
+            <div class="submit-section">
+              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
 
 
-      <div id="experience_info" class="modal custom-modal fade" role="dialog">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Experience Informations</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="form-scroll">
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Experience Informations <a href="javascript:void(0);"
-                          class="delete-icon"><i class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
-                            <label class="focus-label">Company Name</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="United States">
-                            <label class="focus-label">Location</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Web Developer">
-                            <label class="focus-label">Job Position</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
-                            </div>
-                            <label class="focus-label">Period From</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
-                            </div>
-                            <label class="focus-label">Period To</label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Experience Informations <a href="javascript:void(0);"
-                          class="delete-icon"><i class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
-                            <label class="focus-label">Company Name</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="United States">
-                            <label class="focus-label">Location</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Web Developer">
-                            <label class="focus-label">Job Position</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
-                            </div>
-                            <label class="focus-label">Period From</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
-                            </div>
-                            <label class="focus-label">Period To</label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
-                    </div>
-                  </div>
-                </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -3119,7 +3271,8 @@
       </div>
     </div>
   </div>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script data-cfasync="false" src="assets/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="assets/js/jquery-3.7.1.min.js" type="18e931c734a219299bfa9142-text/javascript"></script>
 
@@ -3134,33 +3287,166 @@
 
   <script src="assets/js/jquery.dataTables.min.js" type="18e931c734a219299bfa9142-text/javascript"></script>
   <script src="assets/js/dataTables.bootstrap4.min.js" type="18e931c734a219299bfa9142-text/javascript"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"
     type="18e931c734a219299bfa9142-text/javascript"></script>
 
   <script src="assets/js/layout.js" type="18e931c734a219299bfa9142-text/javascript"></script>
   <script src="assets/js/theme-settings.js" type="18e931c734a219299bfa9142-text/javascript"></script>
   <script src="assets/js/greedynav.js" type="18e931c734a219299bfa9142-text/javascript"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/app.js" type="18e931c734a219299bfa9142-text/javascript"></script>
   <script src="assets/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
     data-cf-settings="18e931c734a219299bfa9142-|49" defer></script>
 </body>
-<script src="assets/js/profile.js"></script>
-<script>
-  const newEmployee = JSON.parse(localStorage.getItem('newEmployee'));
+<script src="assets/js/profile.js" defer></script>
+<script src="assets/js/family_information.js" defer></script>
+<!-- <script src="assets/js/personal_information.js"></script> -->
+<script src="assets/js/get_education.js"></script>
+<script src="assets/js/get_emergenycontact.js"></script>
+<script src="assets/js/get_experience.js"></script>
+<script src="assets/js/get_personal_information.js"></script>
+<script src="assets/js/get_education.js"></script>
+<script src="assets/js/get_bankinformation.js"></script>
+<script src="assets/js/get_familyinformation.js"></script>
+<script src="assets/js/experience.js" defer></script>
+<script src="assets/js/bank_informatiom.js"></script>
+<script src="assets/js/emergency_contact.js"></script>
+<script src="assets/js/personal_information.js" defer></script>
+<script src="assets/js/education_information.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  if (newEmployee || editedEmployee|| personalInfo) {
-    document.getElementById('firstname').innerText = newEmployee.employeefirstName;
-    document.getElementById('designation').innerText = newEmployee.employeeDesignation;
-    document.getElementById("editedemployeefirstName").innerText = editedEmployee.employeefirstName;
-    document.getElementById("editedemployeeDesignation").innerText = editedEmployee.employeeDesignation;
-    document.getElementById("passportNo").innerHTML-personalbar.passportNo;
-    document.getElementById("passportExpirydate").innerHTML-personalbar.passportExpirydate;
-    // document.getElementById("image").innerHTML=newEmployee.profileImage;
-    // Optionally, you can add more details here, like company
-    // document.getElementById('employeeCompany').innerText = employeeData.company;
+<!-- //personal Information -->
+<script>
+  let isEdit = false;
+  let currentData = {};
+
+  function openOffCanvas(mode) {
+    const offCanvas = document.getElementById('personal_info_offcanvas');
+    const form = document.getElementById('dataForm');
+    if (mode === 'add') {
+      form.reset();
+      isEdit = false;
+    } else if (mode === 'edit' && currentData.passportNo) {
+      document.getElementById('passportNo').value = currentData.passportNo;
+      document.getElementById('passportExpiry').value = currentData.passportExpiry;
+      document.getElementById('tel').value = currentData.tel;
+      document.getElementById('religion').value = currentData.religion;
+      document.getElementById('nationality').value = currentData.nationality;
+      document.getElementById('maritalStatus').value = currentData.maritalStatus;
+      document.getElementById('employmentSpouse').value = currentData.employmentSpouse;
+      document.getElementById('childrenNo').value = currentData.childrenNo;
+      isEdit = true;
+    } else {
+      alert('No data to edit');
+      return;
+    }
+    offCanvas.classList.add('active');
+  }
+
+  function closeOffCanvas() {
+    document.getElementById('personal_info_offcanvas').classList.remove('active');
+  }
+
+  function saveData(event) {
+    event.preventDefault();
+    currentData = {
+      passportNo: document.getElementById('passportNo').value,
+      passportExpiry: document.getElementById('passportExpiry').value,
+      tel: document.getElementById('tel').value,
+      religion: document.getElementById('religion').value,
+      nationality: document.getElementById('nationality').value,
+      maritalStatus: document.getElementById('maritalStatus').value,
+      employmentSpouse: document.getElementById('employmentSpouse').value,
+      childrenNo: document.getElementById('childrenNo').value
+    };
+    document.getElementById('dataItem').innerHTML = `
+<strong>Passport No:</strong> ${currentData.passportNo}<br>
+<strong>Passport Expiry:</strong> ${currentData.passportExpiry}<br>
+<strong>Tel:</strong> ${currentData.tel}<br>
+<strong>Religion:</strong> ${currentData.religion}<br>
+<strong>Nationality:</strong> ${currentData.nationality}<br>
+<strong>Marital Status:</strong> ${currentData.maritalStatus}<br>
+<strong>Employment of Spouse:</strong> ${currentData.employmentSpouse}<br>
+<strong>No. of Children:</strong> ${currentData.childrenNo}
+`;
+    closeOffCanvas();
+  }
+
+  function deleteData() {
+    const dataItem = document.getElementById('dataItem');
+    if (currentData.passportNo) {
+      currentData = {};
+      dataItem.innerHTML = 'No data available';
+      alert('Data deleted!');
+    } else {
+      alert('No data to delete!');
+    }
   }
 </script>
 
-</html>
+<script>
+  // Retrieve data from localStorage
+  const newEmployee = JSON.parse(localStorage.getItem('newEmployee'));
+  const personalInfo = JSON.parse(localStorage.getItem('personalInfo'));
+  const requestData = JSON.parse(localStorage.getItem('requestData'));
+  const adminLogin = JSON.parse(localStorage.getItem('adminLogin'));
+  const department = JSON.parse(localStorage.getItem('department'));
+  const haliday = JSON.parse(localStorage.getItem('haliday'));
+  const editedEmployee = JSON.parse(localStorage.getItem('editedEmployee')); // If using editedEmployee
+  const designationData = JSON.parse(localStorage.getItem('designationData'))
+
+  // Ensure values are defined and accessible before using
+  if (newEmployee || editedEmployee || personalInfo || requestData || adminLogin || haliday || designationData) {
+    // Use the retrieved data to populate HTML elements, checking that each item is not null or undefined
+    if (newEmployee) {
+      document.getElementById('firstname').innerText = newEmployee.employeefirstName;
+      document.getElementById('designation').innerText = newEmployee.employeeDesignation;
+    }
+
+    if (editedEmployee) {
+      document.getElementById("editedfirstname").innerText = editedEmployee.employeefirstName;
+      document.getElementById("editedLastName").innerText = editedEmployee.employeeDesignation;
+    }
+
+    if (personalInfo) {
+      document.getElementById("passportNo").innerText = personalInfo.passportNo;
+      document.getElementById("passportExpirydate").innerText = personalInfo.passportExpirydate;
+      document.getElementById("personalId").innerText = personalInfo.personalId;
+      document.getElementById("telephone").innerText = personalInfo.telephone;
+    }
+
+    if (requestData) {
+      document.getElementById("familyName").innerText = requestData.name;
+      document.getElementById("relationship").innerText = requestData.relationship;
+    }
+
+    if (adminLogin) {
+      document.getElementById('email').innerText = adminLogin.email;
+      document.getElementById("password").innerText = adminLogin.password; // Note corrected spelling to "password"
+    }
+
+    if (department) {
+      document.getElementById("departmentName").innerText = department.departmentName;
+    }
+
+    if (haliday) {
+      document.getElementById('halidayName').innerText = haliday.halidayName;
+      document.getElementById('halidayDate').innerText = haliday.halidayDate;
+    }
+    if (designationData) {
+      document.getElementById('designationName').innerText = designationData.designationName;
+      document.getElementById('departmentName').innerText = designationData.departmentName;
+    }
+  }
+</script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.getElementById('toastButton').addEventListener('click', function() {
+        var toast = new bootstrap.Toast(document.getElementById('liveToast'));
+        toast.show();
+    });
+</script>

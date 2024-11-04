@@ -1,53 +1,54 @@
-document.getElementById("personal-submit-button").addEventListener("click", handlePersonalInfoSubmit);
+// Add event listener to the form for submission
+document.getElementById("personal_information").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form from reloading the page
 
-function handlePersonalInfoSubmit(event) {
-  event.preventDefault();
+    // Function to format date from dd-MM-yyyy to ISO (yyyy-MM-dd)
+    function formatDateToISO(dateStr) {
+        const [day, month, year] = dateStr.split('-');
+        return `${year}-${month}-${day}`;
+    }
 
-  // Get the stored employeeId and personalId from sessionStorage
-  const employeeId = sessionStorage.getItem("employeeId");
-  const personalId = sessionStorage.getItem("personalId");
+    // Collect form data
+    const personalInfo = {
+        passportNo: document.getElementById("passportNo").value,
+        passportExpirydate: formatDateToISO(document.getElementById("passportExpirydate").value),
+        telephone: document.getElementById("telephone").value,
+        nationality: document.getElementById("nationality").value,
+        religion: document.getElementById("religion").value,
+        martialStatus: document.getElementById("maritalStatus").value,
+        employeementofspouse: document.getElementById("employmentOfSpouse").value,
+        noofchildren: document.getElementById("noOfChildren").value,
+    };
 
-  if (!employeeId || !personalId) {
-    alert("Employee or Personal ID not found in session.");
-    return;
-  }
+    // Retrieve employee ID (make sure it's already stored in localStorage)
+    const employeeId = localStorage.getItem('employeeId');
+    console.log("Employee ID: ", employeeId);
 
-  const personalInfo = {
-    passportNo: document.getElementById("passportNo").value,
-    passportExpirydate: document.getElementById("passportExpirydate").value,
-    telephone: document.getElementById("telephone").value,
-    nationality: document.getElementById("nationality").value,
-    religion: document.getElementById("religion").value,
-    maritalStatus: document.getElementById("maritalStatus").value,
-    employmentOfSpouse: document.getElementById("employmentOfSpouse").value,
-    noOfChildren: document.getElementById("noOfChildren").value,
-  };
-
-  // Add simple validation
-  if (!personalInfo.passportNo || !personalInfo.nationality || !personalInfo.maritalStatus) {
-    alert("Please fill out all required fields.");
-    return;
-  }
-
-  fetch(`http://localhost:8080/api/employees/${employeeId}/personal/${personalId}`, {
-    method: "PUT", // Changed to PUT for updating data
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(personalInfo),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      return response.json();
+    // Send data to the server
+    fetch(`http://localhost:8081/api/personal/${employeeId}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': `Bearer ${localStorage.getItem('authToken')}` // Ensure authorization token is sent
+        },
+        body: JSON.stringify(personalInfo),
     })
-    .then((data) => {
-      console.log("Success:", data);
-      alert("Personal information updated successfully!");
+    .then(response => {
+        if (!response.ok) throw new Error('Failed to post personal information.');
+        return response.json();
     })
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("There was an error updating personal information.");
+    .then(data => {
+        console.log("Personal details added successfully:", data);
+        document.getElementById("personal_information").reset(); // Reset the form
+
+        // Close the modal after successful submission
+        const modal = bootstrap.Modal.getInstance(document.getElementById('personal_info_modal'));
+        modal.hide();  // Bootstrap 5 method to hide modal
+
+        // Update the display with the new values
+        updatePersonalInfoDisplay(personalInfo);
+    })
+    .catch(error => {
+        console.error("Error:", error);
     });
-}
+});
