@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchEmployees() {
-  fetch("http://localhost:8081/api/employee", {
+  fetch("http://localhost:8082/api/employee", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function createButton(parent, text, btnClass, onClickHandler) {
 // Function to delete an employee
 function deleteEmployee(employeeId, employeeCard) {
   if (confirm("Are you sure you want to delete this employee?")) {
-    fetch(`http://localhost:8081/api/employee/${employeeId}`, {
+    fetch(`http://localhost:8082/api/employee/${employeeId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -112,7 +112,7 @@ function deleteEmployee(employeeId, employeeCard) {
 // Function to edit an employee
 function editEmployee(employeeId) {
   // Fetch the employee data from the server using employeeId
-  fetch(`http://localhost:8081/api/employee/${employeeId}`, {
+  fetch(`http://localhost:8082/api/employee/${employeeId}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -178,7 +178,7 @@ document.querySelector('.editbtn').addEventListener('click', function (e) {
   const employeeId = document.getElementById("editedempid").value;
   console.log(employeeId);
   
-  fetch(`http://localhost:8081/api/employee/${employeeId}`, {
+  fetch(`http://localhost:8082/api/employee/${employeeId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
