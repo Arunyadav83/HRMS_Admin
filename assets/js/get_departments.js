@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchListOfDepartments() {
-    fetch("http://localhost:8081/api/department", {
+    fetch("http://localhost:8082/api/department", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

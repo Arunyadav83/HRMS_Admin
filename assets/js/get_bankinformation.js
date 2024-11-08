@@ -10,7 +10,7 @@ function fetchBankInformation() {
     }
 
     // API call to get the bank information for the employee
-    fetch(`http://localhost:8081/api/employee`, {
+    fetch(`http://localhost:8082/api/employee`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

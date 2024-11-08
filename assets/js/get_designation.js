@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchDesignations() {
-    fetch("http://localhost:8081/api/designation", {
+    fetch("http://localhost:8082/api/designation", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

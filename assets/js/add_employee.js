@@ -28,6 +28,7 @@ document
     const Gender = document.getElementById("gender").value;
     const Address = document.getElementById("address").value;
     const department = document.getElementById("department").value;
+    const leaves = document.getElementById("leaves").value;
    // const profileImage=document.getElementById("image").value;
     // const  adminId= localStorage.getItem("adminId")
     // console.log(adminId);
@@ -48,6 +49,7 @@ document
       dateofbirth: dateofbirth,
       address: Address,
       gender : Gender,
+      annualLeaves:leaves
      // profileImage:profileImage
       // admin:adminId
         };
@@ -57,7 +59,7 @@ document
     
     
     // Send POST request with the employee data to the backend
-    fetch("http://localhost:8081/api/employee", {
+    fetch("http://localhost:8082/api/employee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Send data as JSON

@@ -6,7 +6,7 @@ function fetchEducationInformation() {
     }
 
     // Fetch education information from the backend using employeeId
-    fetch(`http://localhost:8081/api/employee`)
+    fetch(`http://localhost:8082/api/employee`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok.');
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // try {
 //     // Send POST request to backend
-//     const response = await fetch(`http://localhost:8081/api/educationInformation/${id}`, {
+//     const response = await fetch(`http://localhost:8082/api/educationInformation/${id}`, {
 //         method: 'PUT',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify(formData),

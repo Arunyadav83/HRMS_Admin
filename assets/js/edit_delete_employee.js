@@ -94,7 +94,7 @@ function appendEmployeeCard(employee) {
 
 // Function to delete an employee
 function deleteEmployee(employeeId) {
-  fetch(`http://localhost:8081/api/employee/${employeeId}`, {
+  fetch(`http://localhost:8082/api/employee/${employeeId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -122,7 +122,7 @@ function deleteEmployee(employeeId) {
 
 // // function editEmployee(employeeId) {
 // //   // Fetch employee data from the server
-// //   fetch(`http://localhost:8081/api/employee/${employeeId}`)
+// //   fetch(`http://localhost:8082/api/employee/${employeeId}`)
 // //     .then(response => response.json())
 // //     .then(employee => {
 // //       // Populate the modal with employee data

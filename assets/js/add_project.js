@@ -33,7 +33,7 @@ document.getElementById("addProject").addEventListener('submit', function (e) {
 
     console.log(projectData.projectDescription);
 
-    fetch(`http://localhost:8081/api/project/addproject/${employeeId}/${adminId}`, {  // Replace with your actual endpoint
+    fetch(`http://localhost:8082/api/project/addproject/${employeeId}/${adminId}`, {  // Replace with your actual endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

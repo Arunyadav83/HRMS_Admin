@@ -38,7 +38,7 @@ document.querySelector('.submit-btn2').addEventListener('click', function (e) {
     console.log(requestData);
     
     // Send POST request using fetch
-    fetch(`http://localhost:8081/api/familyinformation/${employeeId}`, {  // Replace with your actual endpoint
+    fetch(`http://localhost:8082/api/familyinformation/${employeeId}`, {  // Replace with your actual endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

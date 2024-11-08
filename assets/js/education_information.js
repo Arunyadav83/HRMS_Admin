@@ -38,7 +38,7 @@ document.getElementById('educationInfo').addEventListener('submit', async functi
 
     try {
         // Send POST request to the backend API
-        const response = await fetch(`http://localhost:8081/api/educationInformation/${employeeId}`, {
+        const response = await fetch(`http://localhost:8082/api/educationInformation/${employeeId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

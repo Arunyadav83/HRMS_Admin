@@ -6,7 +6,7 @@ function fetchExperienceInformation() {
     }
 
     // Fetch education information from the backend using employeeId
-    fetch(`http://localhost:8081/api/employee`)
+    fetch(`http://localhost:8082/api/employee`)
         .then(response => {
             if (!response.ok) throw new Error('Network response was not ok.');
 

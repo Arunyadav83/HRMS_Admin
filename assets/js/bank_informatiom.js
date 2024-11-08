@@ -19,7 +19,7 @@ if (editedBankForm) {
         console.log(employeeId);
 
         // API call to submit data
-        fetch(`http://localhost:8081/api/bankinformation/${employeeId}`, {
+        fetch(`http://localhost:8082/api/bankinformation/${employeeId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

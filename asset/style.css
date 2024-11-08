@@ -1,0 +1,1071 @@
+
+
+
+/*quote*/
+
+.quote-box {
+    width: 94%;
+    padding: 10px;
+    background-color: #fff9c4; /* Light yellow background */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid #ddd; /* Border */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin: 10px 0;
+    position: absolute;
+    top: 168px;
+}
+
+.quote-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-top: 10px; /* Space between quote text and input */
+}
+
+.quote-input::placeholder {
+    color: #555; /* Placeholder text color */
+}
+
+/*end quote*/
+
+
+
+
+
+
+
+        .input-group1 {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+
+
+        }
+
+
+        .input-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+
+        .offcanvas-right {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100%;
+            background-color: #f8f9fa;
+            transition: all 0.3s ease;
+            z-index: 1050;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .offcanvas-show {
+            right: 0;
+        }
+
+        .offcanvas-header {
+            padding: 1rem;
+            background-color: #e6e9ed;
+            color: #706767;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .offcanvas-body {
+            padding: 1rem;
+            overflow-y: auto;
+        }
+
+        .task-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .task-details p {
+            margin: 0;
+        }
+
+        .task-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        .assignee-section {
+            margin-top: 20px;
+        }
+
+        .assignee-section h6 {
+            margin-bottom: 10px;
+        }
+
+        .assignee-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .assignee-item img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .assignee-item span {
+            font-size: 1rem;
+        }
+
+        .overlay {
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            z-index: 1040;
+        }
+
+        @media (max-width: 768px) {
+            .offcanvas-right {
+                width: 100%;
+            }
+        }
+
+        /*--first card css*/
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        } */
+
+
+        /* body {
+            overflow: hidden;
+        } */
+
+        .col9 {
+            width: 100%;
+        }
+
+
+
+
+        /* .container{
+           
+            overflow-y: scroll !important; 
+            scroll-behavior: smooth; 
+           
+        } */
+
+
+        h1 {
+            font-size: 24px;
+            color: #4a4a4a;
+            margin-bottom: 15px;
+        }
+
+        .task-header {
+            margin-bottom: 20px;
+        }
+
+        .task-header strong {
+            display: block;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+
+        .task-header p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .task-footer {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0px;
+        }
+
+        .task-footer p {
+            color: #1a6fa7;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .task-footer a {
+            text-decoration: none;
+            color: #0078D7
+        }
+
+        .checklist-link {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #56d1e0;
+            cursor: pointer;
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .task-header strong {
+                font-size: 14px;
+            }
+        }
+
+
+        /*-end-first card css*/
+
+
+
+
+        a {
+            text-decoration: none;
+        }
+
+
+
+        /* Responsive Design */
+
+
+        /*comment section end*/
+
+
+        /*right side col*/
+
+        /* Offcanvas styling */
+        .offcanvas-end {
+            width: 80% !important;
+        }
+
+        #myOffcanvas {
+            overflow-y: auto;
+        }
+
+        /* Right-side panel */
+        .task-details {
+            background-color: #E7F5F9;
+            border: 1px solid #d9e3e9;
+            border-radius: 10px;
+            padding: 20px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        /* Header for completed section */
+        .completed-header {
+            background-color: #56d1e0;
+            color: white;
+            padding: 12px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            text-align: left;
+            font-size: 12px;
+
+        }
+
+        /* Task meta section */
+        .task-meta {
+
+            margin-top: 22px;
+            font-size: 14px;
+            color: #5A5A5A;
+        }
+
+        .task-meta p {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .task-meta p span {
+            font-weight: bold;
+            color: #6A6A6A;
+        }
+
+        /* Video call section */
+        .video-call {
+            background-color: #F3FAFD;
+            border: 1px solid #CCDDE2;
+            padding: 12px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* User info details */
+        .user-details {
+            margin-top: 30px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .user-info img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .user-info a {
+            font-weight: bold;
+            color: #0078D7;
+        }
+
+        /* Left-side nav */
+        .left-nav {
+            background-color: #F8F9FB;
+            border-right: 1px solid #EAEFF5;
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            color: #333;
+        }
+
+        .nav-link.active {
+            background-color: #00B0FF;
+            color: white;
+        }
+
+        .ob {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container_inside {
+            flex: 0 0 auto;
+            width: 75%;
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .offcanvas-end {
+                width: 100% !important;
+            }
+
+            .container_inside {
+                width: 100%;
+            }
+        }
+
+        /*end right side col*/
+
+
+        /*media querires*/
+        /* General styles for mobile devices */
+        @media (max-width: 576px) {
+            .offcanvas-right {
+                width: 100%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .container2 {
+                margin: 0;
+                padding: 15px;
+                /* width: 100%; */
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .task-header strong {
+                font-size: 14px;
+            }
+
+            .task-footer p {
+                font-size: 12px;
+            }
+
+        }
+
+
+
+        /* Tablet styles */
+        @media (min-width: 577px) and (max-width: 768px) {
+            .offcanvas-right {
+                width: 90%;
+            }
+
+            .task-header p {
+                font-size: 16px;
+            }
+
+            .task-footer p {
+                font-size: 14px;
+            }
+
+
+
+
+
+        }
+
+        /* Larger devices */
+        @media (min-width: 769px) {
+            .offcanvas-right {
+                width: 80%;
+            }
+
+            .task-header {
+                margin-bottom: 30px;
+            }
+
+            .task-footer p {
+                font-size: 14px;
+            }
+
+            .task-meta p {
+                /* font-size: 16px; */
+                display: flex;
+            }
+
+
+        }
+
+        /*end media queries*/
+
+        /* Comment Tabs Styles */
+
+
+        /* Media Queries for Responsiveness */
+
+
+
+
+
+
+        /*-checklist-*/
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .checklist-container {
+            margin-bottom: 20px;
+        }
+
+        .checklist {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            margin-top: 15px;
+
+        }
+
+        .checklist-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .checklist-title {
+            font-weight: bold;
+
+        }
+
+        .checklist-title:hover {
+            color: #56d1e0;
+
+        }
+
+        .delete-checklist {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+
+        }
+
+        .delete-checklist:hover {
+            background-color: rgb(224, 71, 71);
+        }
+
+        .checklist-items {
+            margin-bottom: 10px;
+        }
+
+        .checklist-item {
+            /* display: flex; */
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .item-input {
+            width: 60%;
+            padding: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        .add-item {
+            background-color: #1a6fa7;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .add-item:hover {
+            background-color: rgb(119, 119, 225);
+
+        }
+
+        #add-checklist {
+            background-color: #56d1e0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            width: 20%;
+        }
+
+        #add-checklist:hover {
+            background-color: rgb(119, 119, 225);
+        }
+
+
+        .delete-item {
+
+            font-size: 13px;
+            border-radius: 10px;
+            border: 0.5px solid grey;
+
+
+        }
+
+
+
+        /*remainder styles*/
+
+
+
+        .reminder-container {
+            position: relative;
+            /* padding: 10px; */
+
+        }
+
+        .add-reminder-text {
+            color: #0066cc;
+            cursor: pointer;
+        }
+
+        .reminder-popup {
+            display: none;
+            position: absolute;
+            /* right: 0px; */
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            width: 400px;
+            z-index: 12;
+            /* margin-right: 200px; */
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .popup-header .close-btn {
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .reminder-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        /* .form-control {
+  width: 48%;
+} */
+
+        .msg-email-icons {
+            display: flex;
+            /* gap: 10px; */
+            /* margin-top: 10px; */
+        }
+
+        .icon-btn {
+            background: #e9dede;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .icon-btn i {
+            font-size: 18px;
+        }
+
+        .popup-footer {
+            text-align: center;
+        }
+
+        .popup-footer .btn {
+            width: 20%;
+        }
+
+        .reminder-list {
+            margin-top: 20px;
+        }
+
+        .reminder-item {
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reminder-item i {
+            margin-left: 5px;
+            cursor: pointer;
+            color: red;
+        }
+
+
+        /*remainder styles end*/
+
+
+
+        @media (max-width: 500px) {
+            .checklist-header {
+                display: flex;
+                /* flex-direction:column; */
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+
+
+        @media (max-width: 1100px) {
+            .user-info {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+        .dea {
+            margin-top: 30px;
+        }
+
+        /*media queries*/
+
+
+        @media (max-width: 500px) {
+            .offcanvas-title {
+                font-size: 13px;
+            }
+        }
+
+
+
+
+        @media (max-width: 1100px) {
+            .dea {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+
+        @media (max-width: 1100px) {
+            .create {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .remind {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+
+
+        @media (max-width: 572px){
+            .reminder-popup {
+
+                width: 250px;
+              
+
+
+            }
+            .msg-email-icons{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+            }
+            .reminder-body{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .popup-footer .btn{
+                width: 35%;
+            }
+
+
+            .task-container{
+                width: 250px;
+
+            }
+
+            .task-actions .btn-cancel{
+                margin-top: 5px;
+            }
+
+
+            .quote-box{
+                position: absolute;
+                top: 216px;
+                width: 90%;
+            }
+        }
+
+
+        @media (max-width: 320px){
+            .quote-box{
+                position: absolute;
+                top: 215px;
+                width: 70%;
+            }
+        }
+
+        @media (max-width: 768px)
+        {
+            .quote-box{
+                position: absolute;
+                top: 210px;
+                width: 80%;
+            }
+
+        }
+
+
+
+        /*offcanva body*/
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .btn-outline-secondary {
+            color: #333;
+            border-color: #333;
+        }
+
+        /* Task Section */
+        .task-section {
+            margin-top: 20px;
+            position: relative;
+
+        }
+
+        .task-name {
+            border: none;
+            border-bottom: 2px solid #ddd;
+            padding: 10px;
+            font-size: 18px;
+            width: 100%;
+            outline: none;
+        }
+
+        .task-name:focus {
+            /* border-bottom: 2px solid #007bff; */
+        }
+
+        .high-priority {
+            /* display: inline-block; */
+            margin-top: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .high-priority i {
+            color: red;
+        }
+
+        /* Toolbar Icons */
+        .toolbar-icons {
+            /* display: flex;
+    justify-content: space-between;
+    padding: 10px 0; */
+        }
+
+        .icon {
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 4px;
+            /* color: #007bff; */
+            /* background-color: #e9f5ff; */
+        }
+
+        .icon:hover {
+            /* background-color: #d4ebff; */
+            color: #007bff;
+        }
+
+        /* Form Section */
+        .form-section .form-group {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            /* width: auto; */
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .task-section {
+                max-width: 100%;
+            }
+        }
+
+
+        .btn2 {
+            display: flex;
+            align-items: center;
+        }
+
+
+
+        @media(max-width:320) {
+            .toolbar-icons {
+                /* display: flex; */
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+
+
+        /*type text*/
+
+
+
+        input[type="text"] {
+            font-size: 18px;
+            padding: 10px;
+            margin-left: 18px;
+            /* border: none; */
+            /* Remove border */
+
+            width: 81%;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            /* Remove focus outline */
+            /* border-bottom: 2px solid #007bff; */
+            /* Optional bottom border color change on focus */
+        }
+
+        .form-label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        /* end type text*/
+
+
+/*text area*/
+
+textarea {
+            font-size: 18px;
+            padding: 10px;
+            border: none;    /* Remove border */
+            width: 100%;
+            height: 150px;
+            resize: none;    /* Prevent resizing (optional) */
+        }
+
+        textarea:focus {
+            outline: none;   /* Remove focus outline */
+        }
+
+        .form-label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+
+        /* end text area*/
+
+        /*file*/
+        .drop-zone {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            transition: border-color 0.3s ease;
+            cursor: pointer; /* Make the drop zone clickable */
+        }
+
+        .drop-zone.drag-over {
+            border-color: #3498db; /* Change border color on drag */
+        }
+
+        .drop-zone .settings-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+
+
+        .file-options {
+            display: none;  /* Initially hidden */
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            border: 1px dashed #ccc;
+        }
+
+        .file-options .option {
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            margin: 0 15px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .file-options .option img {
+            display: block;
+            margin: 0 auto 10px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .file-options .drop-zone {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            transition: border-color 0.3s ease;
+        }
+
+        .file-options .drop-zone.drag-over {
+            border-color: #3498db;
+        }
+
+        .file-btn {
+            cursor: pointer;
+        }
+
+
+
+.active{
+    color: #b400cc;
+}
+
+/*file media*/
+.file-options .option{
+    margin: 5px 0px ;  
+    /* width: 100%             ; */
+}
+/*end file media*/
+
+
+   /* @media(max-width:320px){
+    .bnt1{
+        width: 10%;
+    }
+   } */

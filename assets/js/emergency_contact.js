@@ -23,7 +23,7 @@ document.getElementById('emergency_contact').addEventListener('submit', function
     };
   
     // Send the data to the server using POST method
-    fetch(`http://localhost:8081/api/emergencycontact/addcontact/${employeeId}`, {
+    fetch(`http://localhost:8082/api/emergencycontact/addcontact/${employeeId}`, {
       method: 'POST', // Use POST method to send the data
       headers: {
         'Content-Type': 'application/json' // Ensure the request content type is JSON

@@ -8,7 +8,7 @@ document
       password: document.getElementById("password").value,
     };
 
-    fetch("http://localhost:8081/api/admin/login", {
+    fetch("http://localhost:8082/api/admin/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -3,7 +3,7 @@
 // });
 
 // function fetchDesignations() {
-//     fetch("http://localhost:8081/api/designation", {
+//     fetch("http://localhost:8082/api/designation", {
 //         method: "GET",
 //         headers: {
 //             "Content-Type": "application/json",
@@ -52,7 +52,7 @@
 
 function openEditModal(designationId) {
     // Fetch the designation by ID to populate modal fields
-    fetch(`http://localhost:8081/api/designation/${designationId}`)
+    fetch(`http://localhost:8082/api/designation/${designationId}`)
         .then((response) => {
             if (response.ok) {
                 return response.json();
@@ -84,7 +84,7 @@ function saveDesignation() {
         department: { departmentName: departmentName }
     };
 
-    fetch(`http://localhost:8081/api/designation/${designationId}`, {
+    fetch(`http://localhost:8082/api/designation/${designationId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -115,7 +115,7 @@ function saveDesignation() {
 //     if (!confirm("Are you sure you want to delete this designation?")) return;
 
 //     // Make DELETE request
-//     fetch(`http://localhost:8081/api/designation/${designationId}`, {
+//     fetch(`http://localhost:8082/api/designation/${designationId}`, {
 //         method: "DELETE",
 //         headers: {
 //             "Content-Type": "application/json",
@@ -136,7 +136,7 @@ function saveDesignation() {
 //         // Additional logging for diagnostics
 //         console.log("Error details:", {
 //             designationId: designationId,
-//             apiEndpoint: `http://localhost:8081/api/designation/${designationId}`,
+//             apiEndpoint: `http://localhost:8082/api/designation/${designationId}`,
 //             headers: {
 //                 "Content-Type": "application/json",
 //             },

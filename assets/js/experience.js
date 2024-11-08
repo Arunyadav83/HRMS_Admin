@@ -22,7 +22,7 @@ document.getElementById('experienceInfo').addEventListener('submit', function (e
     console.log(employeeId);
 
     // Send POST request to the backend API
-    fetch(`http://localhost:8081/api/experience/${employeeId}`, {
+    fetch(`http://localhost:8082/api/experience/${employeeId}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

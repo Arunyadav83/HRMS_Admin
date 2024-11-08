@@ -54,7 +54,7 @@
 </a>
 
 <div class="page-title-box">
-<h3>UltrakeyIT Technologies</h3>
+<h3>Ultrakey IT Solutions</h3>
 </div>
 
 <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
@@ -433,14 +433,8 @@
 <li class="menu-title">
 <span>Main</span>
 </li>
-<li class="submenu">
-<a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-<!-- <li><a href="employee-dashboard.html">Employee Dashboard</a></li> -->
-  
-</ul>
-</li>
+<li><a href="admin-dashboard.html"><i class="la la-user"></i><span>Admin Dashboard</span></a></li>
+
 <li class="submenu">
 <a href="#"><i class="la la-cube"></i> <span> Apps</span> <span class="menu-arrow"></span></a>
 <ul>
@@ -1085,12 +1079,18 @@ library_add_check
 <td>1 day</td>
 <td>Going to Hospital</td>
 <td class="text-center">
-<div class="action-label">
-<a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-<i class="fa-regular fa-circle-dot text-success"></i> Approved
-</a>
-</div>
-</td>
+	<div class="dropdown action-label">
+	<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+	<i class="fa-regular fa-circle-dot text-danger"></i> Pending
+	</a>
+	<div class="dropdown-menu dropdown-menu-right">
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-purple"></i> New</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-info"></i> Pending</a>
+	<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#approve_leave"><i class="fa-regular fa-circle-dot text-success"></i> Approved</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-danger"></i> Declined</a>
+	</div>
+	</div>
+	</td>
 <td>
 <h2 class="table-avatar">
 <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
@@ -1115,12 +1115,18 @@ library_add_check
 <td>5 days</td>
 <td>Going to Hospital</td>
 <td class="text-center">
-<div class="action-label">
-<a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-<i class="fa-regular fa-circle-dot text-danger"></i> Declined
-</a>
-</div>
-</td>
+	<div class="dropdown action-label">
+	<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+	<i class="fa-regular fa-circle-dot text-blue"></i> New
+	</a>
+	<div class="dropdown-menu dropdown-menu-right">
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-purple"></i> New</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-info"></i> Pending</a>
+	<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#approve_leave"><i class="fa-regular fa-circle-dot text-success"></i> Approved</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-danger"></i> Declined</a>
+	</div>
+	</div>
+	</td>
 <td>
 <h2 class="table-avatar">
 <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
@@ -1144,12 +1150,18 @@ library_add_check
 <td>Second Half</td>
 <td>Going to Hospital</td>
 <td class="text-center">
-<div class="action-label">
-<a class="btn btn-white btn-sm btn-rounded" href="javascript:void(0);">
-<i class="fa-regular fa-circle-dot text-purple"></i> New
-</a>
-</div>
-</td>
+	<div class="dropdown action-label">
+	<a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+	<i class="fa-regular fa-circle-dot text-success"></i> Approved
+	</a>
+	<div class="dropdown-menu dropdown-menu-right">
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-purple"></i> New</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-info"></i> Pending</a>
+	<a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#approve_leave"><i class="fa-regular fa-circle-dot text-success"></i> Approved</a>
+	<a class="dropdown-item" href="#"><i class="fa-regular fa-circle-dot text-danger"></i> Declined</a>
+	</div>
+	</div>
+	</td>
 <td>
 <h2 class="table-avatar">
 <a href="profile.html" class="avatar avatar-xs"><img src="assets/img/profiles/avatar-09.jpg" alt="User Image"></a>
@@ -1261,65 +1273,65 @@ library_add_check
 </button>
 </div>
 <div class="modal-body">
-<form>
-<div class="input-block mb-3">
-<label class="col-form-label">Leave Type <span class="text-danger">*</span></label>
-<select class="select">
-<option>Select Leave Type</option>
-<option>Casual Leave 12 Days</option>
-</select>
-</div>
-<div class="input-block mb-3">
-<label class="col-form-label">From <span class="text-danger">*</span></label>
-<div class="cal-icon">
-<input class="form-control datetimepicker" value="01-01-2019" type="text">
-</div>
-</div>
-<div class="input-block mb-3">
-	<label class="col-form-label">
-		Session<span class="text-danger">*</span></label>
-	<select class="select">
-	<option>
-		Session 1</option>
-	<option>
-		Session 2</option>
-	
-	</select>
-	</div>
-
-<div class="input-block mb-3">
-<label class="col-form-label">To <span class="text-danger">*</span></label>
-<div class="cal-icon">
-<input class="form-control datetimepicker" value="01-01-2019" type="text">
-</div>
-</div>
-<div class="input-block mb-3">
-	<label class="col-form-label">
-		Session<span class="text-danger">*</span></label>
-	<select class="select">
-	<option>
-		Session 1</option>
-	<option>
-		Session 2</option>
-	
-	</select>
-	</div>
-<div class="input-block mb-3">
-<label class="col-form-label">Number of days <span class="text-danger">*</span></label>
-<input class="form-control" readonly type="text" value="2">
-</div>
-<div class="input-block mb-3">
-<label class="col-form-label">Remaining Leaves <span class="text-danger">*</span></label>
-<input class="form-control" readonly value="12" type="text">
-</div>
-<div class="input-block mb-3">
-<label class="col-form-label">Leave Reason <span class="text-danger">*</span></label>
-<textarea rows="4" class="form-control">Going to hospital</textarea>
-</div>
-<div class="submit-section">
-<button class="btn btn-primary submit-btn">Save</button>
-</div>
-</form>
+    <form id="applyLeaveForm">
+        <div class="input-block mb-3">
+            <label class="col-form-label">Leave Type <span class="text-danger">*</span></label>
+            <select class="select" id="leaveType">
+                <option>Select Leave Type</option>
+                <option>Casual Leave</option>
+                <!-- Add more leave types as needed -->
+            </select>
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">From <span class="text-danger">*</span></label>
+            <div class="cal-icon">
+                <input class="form-control datetimepicker" id="startDate" type="text" placeholder="DD-MM-YYYY">
+            </div>
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">Session <span class="text-danger">*</span></label>
+            <select class="select" id="session1">
+                <option>Session 1</option>
+                <option>Session 2</option>
+            </select>
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">To <span class="text-danger">*</span></label>
+            <div class="cal-icon">
+                <input class="form-control datetimepicker" id="endDate" type="text" placeholder="DD-MM-YYYY">
+            </div>
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">Session <span class="text-danger">*</span></label>
+            <select class="select" id="session2">
+                <option>Session 1</option>
+                <option>Session 2</option>
+            </select>
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">Number of days <span class="text-danger">*</span></label>
+            <input class="form-control" id="noOfDays" readonly type="text" value="2">
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">Remaining Leaves <span class="text-danger">*</span></label>
+            <input class="form-control" id="remainingLeaves" readonly value="12" type="text">
+        </div>
+        
+        <div class="input-block mb-3">
+            <label class="col-form-label">Leave Reason <span class="text-danger">*</span></label>
+            <textarea rows="4" class="form-control" id="leaveReason" placeholder="Reason for leave"></textarea>
+        </div>
+        
+        <div class="submit-section">
+            <button type="button" class="btn btn-primary submit-btn" onclick="applyLeave()">Save</button>
+        </div>
+    </form>
 </div>
 </div>
 </div>

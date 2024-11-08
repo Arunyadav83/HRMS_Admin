@@ -1,6 +1,6 @@
 // Function to fetch and populate the department dropdown
 function populateDepartments() {
-    fetch('http://localhost:8081/api/department') // Ensure this endpoint is correct
+    fetch('http://localhost:8082/api/department') // Ensure this endpoint is correct
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -45,7 +45,7 @@ document.getElementById("addDesignation").addEventListener('submit', function (e
 
     console.log("Designation Data: ", designationData); // Log the data for debugging
 
-    fetch(`http://localhost:8081/api/designation/addDepartment/${departmentId}`, {
+    fetch(`http://localhost:8082/api/designation/addDepartment/${departmentId}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ document.getElementById("addDesignation").addEventListener('submit', function (e
 
 // Function to fetch and store designations in localStorage
 function fetchAndStoreDesignations() {
-    fetch('http://localhost:8081/api/designation')
+    fetch('http://localhost:8082/api/designation')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -126,7 +126,7 @@ function deleteDesignation() {
     console.log(`Attempting to delete designation ID: ${actualDesignationId}`); // Log ID for deletion
 
     if (actualDesignationId) {
-        fetch(`http://localhost:8081/api/designation/${actualDesignationId}`, {
+        fetch(`http://localhost:8082/api/designation/${actualDesignationId}`, {
             method: 'DELETE',
         })
         .then(response => {

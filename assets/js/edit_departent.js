@@ -1,6 +1,6 @@
 // Function to load departments from the API
 function loadDepartments() {
-    fetch('http://localhost:8081/api/department')
+    fetch('http://localhost:8082/api/department')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Error fetching departments: ${response.status} ${response.statusText}`);
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', loadDepartments);
 
 // Open the edit modal and populate current department details
 function openEditModal(departmentId) {
-    fetch(`http://localhost:8081/api/department/${departmentId}`)
+    fetch(`http://localhost:8082/api/department/${departmentId}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Error fetching department details: ${response.status} ${response.statusText}`);
@@ -90,7 +90,7 @@ document.getElementById("editDepartmentForm").addEventListener('submit', functio
         departmentName: departmentName
     };
 
-    fetch(`http://localhost:8081/api/department/update/${departmentId}`, {
+    fetch(`http://localhost:8082/api/department/update/${departmentId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

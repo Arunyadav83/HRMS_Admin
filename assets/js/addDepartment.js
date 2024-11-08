@@ -47,7 +47,7 @@ document.querySelector("#add_department_form").addEventListener('submit', functi
     };
 
     // Fetch request to add the department
-    fetch(`http://localhost:8081/api/department/add`, {
+    fetch(`http://localhost:8082/api/department/add`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -118,7 +118,7 @@ document.getElementById("confirmDeleteDepartment").addEventListener("click", fun
     const deleteButton = document.getElementById("confirmDeleteDepartment");
     deleteButton.disabled = true;
 
-    fetch(`http://localhost:8081/api/department/${departmentId}`, {
+    fetch(`http://localhost:8082/api/department/${departmentId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
