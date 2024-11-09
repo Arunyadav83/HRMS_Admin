@@ -28,7 +28,8 @@ document
     const Gender = document.getElementById("gender").value;
     const Address = document.getElementById("address").value;
     const department = document.getElementById("department").value;
-
+    // const  adminId= localStorage.getItem("adminId")
+    // console.log(adminId);
     // Create new employee object with the form data
     const newEmployee = {
       employeeId: empid,
@@ -45,12 +46,14 @@ document
       employeePhonenumber: phonenumber,
       dateofbirth: dateofbirth,
       address: Address,
-      gender : Gender
+      gender : Gender,
+      // admin:adminId
         };
 
     // Log the employee data (optional for debugging)
     console.log(newEmployee);
-
+    
+    
     // Send POST request with the employee data to the backend
     fetch("http://localhost:8081/api/employee", {
       method: "POST",

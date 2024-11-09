@@ -34,7 +34,7 @@
               </div>
               <div class="input-block mb-4">
                 <label class="col-form-label">Password</label>
-                <input class="form-control" type="password" id="password" required />
+                <input class="form-control" autocomplete="current-password" required id="password" required type="password" />
               </div>
               <div class="input-block mb-4 text-center">
                 <button class="btn btn-primary account-btn" type="submit">Login</button>
@@ -51,50 +51,7 @@
 
   <script src="assets/js/jquery-3.7.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-  <!-- JavaScript to handle login -->
-  <script>
-    $(document).ready(function () {
-      $('#loginForm').submit(function (event) {
-        event.preventDefault(); // Prevent form submission
-  
-        var email = $('#email').val();
-        var password = $('#password').val();
-  
-        // AJAX request to check credentials
-        $.ajax({
-          url: 'http://localhost/your-backend/login.php', // Replace with your actual backend URL
-          type: 'POST',
-          contentType: 'application/json',
-          data: JSON.stringify({
-            email: email,
-            password: password
-          }),
-          success: function (response) {
-            // Ensure response is parsed as JSON
-            try {
-              var jsonResponse = JSON.parse(response);
-            } catch (e) {
-              alert('Invalid server response: ' + response);
-              return;
-            }
-  
-            if (jsonResponse.status === 'success') {
-              alert('Login successful!');
-              window.location.href = 'admin-dashboard.html'; // Redirect on success
-            } else {
-              alert(jsonResponse.message); // Show error message from the server
-            }
-          },
-          error: function (xhr, status, error) {
-            // Handle server or network errors
-            alert('Error: ' + xhr.responseText);
-          }
-        });
-      });
-    });
-  </script>
-  
+  <script src="assets/js/adminLogin.js"></script>
 </body>
 
 </html>

@@ -12,23 +12,15 @@
   <title>Employee Profile - HRMS admin template</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="assets/img/key.png">
-
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
   <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-
   <link rel="stylesheet" href="assets/css/line-awesome.min.css">
   <link rel="stylesheet" href="assets/css/material.css">
-
   <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
-
   <link rel="stylesheet" href="assets/css/select2.min.css">
-
   <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-
   <link rel="stylesheet" href="assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css">
-
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -59,7 +51,7 @@
       </a>
 
       <div class="page-title-box">
-        <h3>UltrakeyIT Technologies</h3>
+        <h3>Ultrakey It Solutions</h3>
       </div>
 
       <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
@@ -77,10 +69,6 @@
             </form>
           </div>
         </li>
-
-
-
-
 
         <li class="nav-item dropdown">
           <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -1146,13 +1134,12 @@
           </div>
         </div>
         <div class="tab-content">
-
           <div id="emp_profile" class="pro-overview tab-pane fade show active">
             <div class="row">
               <div class="col-md-6 d-flex" id="personalInfoForm">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Personal Informations
+                    <h3 class="card-title">Personal Information
                       <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#personal_info_modal">
                         <i class="fa-solid fa-pencil"></i>
                       </a>
@@ -1160,94 +1147,107 @@
                     <ul class="personal-info">
                       <li>
                         <div class="title">Passport No.</div>
-                        <div class="text">9876543210</div>
+                        <div class="text" id="passportNoDisplay">9876543210</div>
                       </li>
                       <li>
-                        <div class="title">Passport ExpDate.</div>
-                        <div class="text" >9876543210</div>
+                        <div class="title">Passport ExpDate</div>
+                        <div class="text" id="passportExpDateDisplay">01-01-2030</div>
                       </li>
                       <li>
                         <div class="title">Tel</div>
-                        <div class="text" ><a href="#">9876543210</a></div>
+                        <div class="text"><a href="#" id="telephoneDisplay">9876543210</a></div>
                       </li>
                       <li>
                         <div class="title">Nationality</div>
-                        <div class="text" >Indian</div>
+                        <div class="text" id="nationalityDisplay">Indian</div>
                       </li>
                       <li>
                         <div class="title">Religion</div>
-                        <div class="text" >Christian</div>
+                        <div class="text" id="religionDisplay">Christian</div>
                       </li>
                       <li>
                         <div class="title">Marital status</div>
-                        <div class="text" >Married</div>
+                        <div class="text" id="maritalStatusDisplay">Married</div>
                       </li>
                       <li>
                         <div class="title">Employment of spouse</div>
-                        <div class="text" >No</div>
+                        <div class="text" id="employmentOfSpouseDisplay">No</div>
                       </li>
                       <li>
                         <div class="title">No. of children</div>
-                        <div class="text" >2</div>
+                        <div class="text" id="noOfChildrenDisplay">2</div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+
+              <div class="col-md-6 d-flex">
+                <div class="card profile-box flex-fill">
+                  <div class="card-body">
+                    <h3 class="card-title">
+                      Emergency Contact
+                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#emergency_contact_modal">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </h3>
+              
+                    <h5 class="section-title">Primary</h5>
+                    <ul class="personal-info">
+                      <li>
+                        <div class="title">Name</div>
+                        <div class="text text-primary-name">John Doe</div> <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Relationship</div>
+                        <div class="text text-primary-relationship">Father</div> <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Phone</div>
+                        <div class="text text-primary-phone">9876543210</div> <!-- Dynamic -->
+                      </li>
+                    </ul>
+              
+                    <hr>
+              
+                    <h5 class="section-title">Secondary</h5>
+                    <ul class="personal-info">
+                      <li>
+                        <div class="title">Name</div>
+                        <div class="text text-secondary-name">Karen Wills</div> <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Relationship</div>
+                        <div class="text text-secondary-relationship">Brother</div> <!-- Dynamic -->
+                      </li>
+                      <li>
+                        <div class="title">Phone</div>
+                        <div class="text text-secondary-phone">9876543210</div> <!-- Dynamic -->
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <div class="col-md-6 d-flex">
-                <div class="card profile-box flex-fill">
-                  <div class="card-body">
-                    <h3 class="card-title">Emergency Contact <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#emergency_contact_modal"><i class="fa-solid fa-pencil"></i></a></h3>
-                    <h5 class="section-title">Primary</h5>
-                    <ul class="personal-info">
-                      <li>
-                        <div class="title">Name</div>
-                        <div class="text">John Doe</div>
-                      </li>
-                      <li>
-                        <div class="title">Relationship</div>
-                        <div class="text">Father</div>
-                      </li>
-                      <li>
-                        <div class="title">Phone </div>
-                        <div class="text">9876543210, 9876543210</div>
-                      </li>
-                    </ul>
-                    <hr>
-                    <h5 class="section-title">Secondary</h5>
-                    <ul class="personal-info">
-                      <li>
-                        <div class="title">Name</div>
-                        <div class="text">Karen Wills</div>
-                      </li>
-                      <li>
-                        <div class="title">Relationship</div>
-                        <div class="text">Brother</div>
-                      </li>
-                      <li>
-                        <div class="title">Phone </div>
-                        <div class="text">9876543210, 9876543210</div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
             </div>
             <div class="row">
               <div class="col-md-6 d-flex" id="bank_information">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
-                    <h3 class="card-title">Bank information <a href="#" class="edit-icon" data-bs-toggle="modal"
-                        data-bs-target="#bank_information"><i class="fa-solid fa-pencil"></i></a></h3>
+                    <h3 class="card-title">
+                      Bank Information
+                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#editBankInfoModal">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
+                    </h3>
                     <ul class="personal-info">
                       <li>
-                        <div class="title">Bank name</div>
+                        <div class="title">Bank Name</div>
                         <div class="text">ICICI Bank</div>
                       </li>
                       <li>
-                        <div class="title">Bank account No.</div>
+                        <div class="title">Bank Account No.</div>
                         <div class="text">159843014641</div>
                       </li>
                       <li>
@@ -1263,8 +1263,64 @@
                 </div>
               </div>
 
+              <!-- Edit Bank Information Modal -->
+              <div class="modal custom-modal fade" id="editBankInfoModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"> Bank Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!-- <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#editBankInfoModal">
+                              <i class="fa-solid fa-pencil"></i>
+                            </a> -->
+                        </div>
+                        <div class="modal-body">
+                            <form id="editBankForm">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bank Information</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Bank Name<span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="bankName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Bank Account No.<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="accountNumber" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">IFSC Code<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="ifscCode" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">PAN No<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="panNumber" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="submit-section">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
 
-              <div id="bank_information" class="modal custom-modal fade" role="dialog">
+              <div class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -1281,7 +1337,7 @@
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="input-block mb-3">
-                                  <label class="col-form-label">Name <span class="text-danger">*</span></label>
+                                  <label class="col-form-label">Primary Name<span class="text-danger">*</span></label>
                                   <input type="text" class="form-control">
                                 </div>
                               </div>
@@ -1297,12 +1353,12 @@
                                   <input class="form-control" type="text">
                                 </div>
                               </div>
-                              <div class="col-md-6">
+                              <!-- <div class="col-md-6">
                                 <div class="input-block mb-3">
                                   <label class="col-form-label">Phone 2</label>
                                   <input class="form-control" type="text">
                                 </div>
-                              </div>
+                              </div> -->
                             </div>
                           </div>
                         </div>
@@ -1326,7 +1382,7 @@
                         data-bs-target="#family_info_modal"><i class="fa-solid fa-pencil"></i></a></h3>
                     <div class="table-responsive">
                       <table class="table table-nowrap">
-                        <thead>
+                        <thead> 
                           <tr>
                             <th>Name</th>
                             <th>Relationship</th>
@@ -2272,171 +2328,143 @@
 
       <div id="personal_info_modal" class="modal custom-modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Personal Information</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Passport No</label>
-                      <input type="text" class="form-control" id="passportNo">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Passport Expiry Date</label>
-                      <div class="cal-icon">
-                        <input class="form-control datetimepicker" type="text" id="passportExpirydate">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Tel</label>
-                      <input class="form-control" type="text" id="telephone">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Nationality <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="nationality">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Religion</label>
-                      <div class="cal-icon">
-                        <input class="form-control" type="text" id="religion">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Marital status <span class="text-danger">*</span></label>
-                      <select class="select form-control" id="maritalStatus">
-                        <option>-</option>
-                        <option>Single</option>
-                        <option>Married</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Employment of spouse</label>
-                      <input class="form-control" type="text" id="employmentOfSpouse">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">No. of children </label>
-                      <input class="form-control" type="text" id="noOfChildren">
-                    </div>
-                  </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Personal Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="submit-section">
-                  <button class="btn btn-primary" id="personal-submit-button">Submit</button>
+                <div class="modal-body">
+                    <form id="personal_information">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Passport No</label>
+                                    <input type="text" class="form-control" id="passportNo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Passport Expiry Date</label>
+                                    <div class="cal-icon">
+                                        <input class="form-control datetimepicker" type="text" id="passportExpirydate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Tel</label>
+                                    <input class="form-control" type="text" id="telephone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Nationality <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="nationality">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Religion</label>
+                                    <div class="cal-icon">
+                                        <input class="form-control" type="text" id="religion">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Marital status <span class="text-danger">*</span></label>
+                                    <select class="select form-control" id="maritalStatus">
+                                        <option>-</option>
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Employment of spouse</label>
+                                    <input class="form-control" type="text" id="employmentOfSpouse">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">No. of children</label>
+                                    <input class="form-control" type="text" id="noOfChildren">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-section">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
                 </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
+    
 
 
       <div id="family_info_modal" class="modal custom-modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"> Family Informations</h5>
+              <h5 class="modal-title">Family Information</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="familyInfoTableBody">
                 <div class="form-scroll">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title">Family Member <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
+                      <h3 class="card-title">Family Member
+                        <a href="javascript:void(0);" class="delete-icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </a>
+                      </h3>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="input-block mb-3">
                             <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="familyName" required>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3">
                             <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="relationship" required>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3">
                             <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="date" id="birthday" required>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3">
                             <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="phone" required>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3">
-                            <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text">
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
                     </div>
                   </div>
                 </div>
                 <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
+                  <button type="button" class="btn btn-primary submit-btn2">Submit</button>
                 </div>
               </form>
             </div>
+
+
           </div>
         </div>
       </div>
+
 
 
       <div id="emergency_contact_modal" class="modal custom-modal fade" role="dialog">
@@ -2449,188 +2477,129 @@
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="emergency_contact">
                 <div class="card">
                   <div class="card-body">
                     <h3 class="card-title">Primary Contact</h3>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="input-block mb-3">
-                          <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control">
+                          <label class="col-form-label">Primary Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="primaryName" required>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="input-block mb-3">
                           <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
+                          <input class="form-control" type="text" id="primaryRelationship" required>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="input-block mb-3">
                           <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone 2</label>
-                          <input class="form-control" type="text">
+                          <input class="form-control" type="text" id="primaryPhone" required>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+      
                 <div class="card">
                   <div class="card-body">
-                    <h3 class="card-title">Primary Contact</h3>
+                    <h3 class="card-title">Secondary Contact</h3>
                     <div class="row">
                       <div class="col-md-6">
                         <div class="input-block mb-3">
-                          <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                          <input type="text" class="form-control">
+                          <label class="col-form-label">Secondary Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="secondaryName" required>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="input-block mb-3">
                           <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
+                          <input class="form-control" type="text" id="secondaryRelationship" required>
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="input-block mb-3">
                           <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input-block mb-3">
-                          <label class="col-form-label">Phone 2</label>
-                          <input class="form-control" type="text">
+                          <input class="form-control" type="text" id="secondaryPhone" required>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+      
                 <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
+                  <button type="submit" class="btn btn-primary submit-btn">Submit</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      
 
 
       <div id="education_info" class="modal custom-modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title"> Education Informations</h5>
+              <h5 class="modal-title">Education Information</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="educationInfo">
                 <div class="form-scroll">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
+                      <h3 class="card-title">Education Information</h3>
                       <div class="row">
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Oxford University" class="form-control floating">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="institution" name="institution">
                             <label class="focus-label">Institution</label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Computer Science" class="form-control floating">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="subject" name="subject">
                             <label class="focus-label">Subject</label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
+                          <div class="input-block mb-3 form-focus">
                             <div class="cal-icon">
-                              <input type="text" value="01/06/2002" class="form-control floating datetimepicker">
+                              <input type="text" class="form-control floating datetimepicker" id="startDate"
+                                name="startDate">
                             </div>
                             <label class="focus-label">Starting Date</label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
+                          <div class="input-block mb-3 form-focus">
                             <div class="cal-icon">
-                              <input type="text" value="31/05/2006" class="form-control floating datetimepicker">
+                              <input type="text" class="form-control floating datetimepicker" id="endDate"
+                                name="endDate">
                             </div>
-                            <label class="focus-label">Complete Date</label>
+                            <label class="focus-label">Completion Date</label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="BE Computer Science" class="form-control floating">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="Degree" name="degree">
                             <label class="focus-label">Degree</label>
                           </div>
                         </div>
                         <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Grade A" class="form-control floating">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="Grade" name="grade">
                             <label class="focus-label">Grade</label>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Education Informations <a href="javascript:void(0);" class="delete-icon"><i
-                            class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Oxford University" class="form-control floating">
-                            <label class="focus-label">Institution</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Computer Science" class="form-control floating">
-                            <label class="focus-label">Subject</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="01/06/2002" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Starting Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <div class="cal-icon">
-                              <input type="text" value="31/05/2006" class="form-control floating datetimepicker">
-                            </div>
-                            <label class="focus-label">Complete Date</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="BE Computer Science" class="form-control floating">
-                            <label class="focus-label">Degree</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus focused">
-                            <input type="text" value="Grade A" class="form-control floating">
-                            <label class="focus-label">Grade</label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
                     </div>
                   </div>
                 </div>
@@ -2642,47 +2611,55 @@
           </div>
         </div>
       </div>
+
 
 
       <div id="experience_info" class="modal custom-modal fade" role="dialog">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Experience Informations</h5>
+              <h5 class="modal-title">Experience Information</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="experienceInfo">
                 <div class="form-scroll">
                   <div class="card">
                     <div class="card-body">
-                      <h3 class="card-title">Experience Informations <a href="javascript:void(0);"
-                          class="delete-icon"><i class="fa-regular fa-trash-can"></i></a></h3>
+                      <h3 class="card-title">Experience Information 
+                        <a href="javascript:void(0);" class="delete-icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </a>
+                      </h3>
                       <div class="row">
                         <div class="col-md-6">
                           <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
+                            <input type="text" class="form-control floating" name="companyName" id="companyName"
+                              value="Digital Development Inc" required>
                             <label class="focus-label">Company Name</label>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="United States">
+                            <input type="text" class="form-control floating" name="location" value="United States"
+                              id="location" required>
                             <label class="focus-label">Location</label>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Web Developer">
+                            <input type="text" class="form-control floating" name="jobPosition" value="Web Developer"
+                              id="jobPosition" required>
                             <label class="focus-label">Job Position</label>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-block mb-3 form-focus">
                             <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
+                              <input type="text" class="form-control floating datetimepicker" name="periodFrom"
+                                id="periodFrom" value="01/07/2007" required>
                             </div>
                             <label class="focus-label">Period From</label>
                           </div>
@@ -2690,68 +2667,26 @@
                         <div class="col-md-6">
                           <div class="input-block mb-3 form-focus">
                             <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
+                              <input type="text" class="form-control floating datetimepicker" id="periodTo"
+                                value="08/06/2018" required>
                             </div>
                             <label class="focus-label">Period To</label>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-body">
-                      <h3 class="card-title">Experience Informations <a href="javascript:void(0);"
-                          class="delete-icon"><i class="fa-regular fa-trash-can"></i></a></h3>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Digital Devlopment Inc">
-                            <label class="focus-label">Company Name</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="United States">
-                            <label class="focus-label">Location</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <input type="text" class="form-control floating" value="Web Developer">
-                            <label class="focus-label">Job Position</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="01/07/2007">
-                            </div>
-                            <label class="focus-label">Period From</label>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="input-block mb-3 form-focus">
-                            <div class="cal-icon">
-                              <input type="text" class="form-control floating datetimepicker" value="08/06/2018">
-                            </div>
-                            <label class="focus-label">Period To</label>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="add-more">
-<a href="javascript:void(0);"><i class="fa-solid fa-plus-circle"></i> Add More</a>
-</div> -->
                     </div>
                   </div>
                 </div>
                 <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
+                  <button type="submit" class="btn btn-primary submit-btn">Submit</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </div>
+      
+
 
     </div>
 
@@ -3146,21 +3081,36 @@
   <script src="assets/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
     data-cf-settings="18e931c734a219299bfa9142-|49" defer></script>
 </body>
-<script src="assets/js/profile.js"></script>
-<script>
-  const newEmployee = JSON.parse(localStorage.getItem('newEmployee'));
+<script src="assets/js/profile.js" defer></script>
+<script src="assets/js/family_information.js" defer></script>
+<!-- <script src="assets/js/personal_information.js"></script> -->
+<script src="assets/js/bank_informatiom.js"></script>
+<script src="assets/js/education_information.js" defer></script>
+<script src="assets/js/experience.js" defer></script>
+<script src="assets/js/personal_information.js" defer></script>
+<script src="assets/js/get_education.js"></script>
+<script src="assets/js/emergency_contact.js"></script>
+<script src="assets/js/get_emergenycontact.js"></script>
+<script src="assets/js/get_personal_information.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/get_familyinformation.js"></script>
 
-  if (newEmployee || editedEmployee|| personalInfo) {
-    document.getElementById('firstname').innerText = newEmployee.employeefirstName;
+<script>
+
+  const newEmployee = JSON.parse(localStorage.getItem('newEmployee'));
+  const personalInfo = JSON.parse(localStorage.getItem('personalInfo'));
+   const requestData=JSON.parse(localStorage.getItem('requestData'))
+
+  if (newEmployee | editedEmployee | personalInfo||requestData) {
+    document.ElementById('firstname').innerText = newEmployee.employeefirstName;
     document.getElementById('designation').innerText = newEmployee.employeeDesignation;
-    document.getElementById("editedemployeefirstName").innerText = editedEmployee.employeefirstName;
-    document.getElementById("editedemployeeDesignation").innerText = editedEmployee.employeeDesignation;
-    document.getElementById("passportNo").innerHTML-personalbar.passportNo;
-    document.getElementById("passportExpirydate").innerHTML-personalbar.passportExpirydate;
-    // document.getElementById("image").innerHTML=newEmployee.profileImage;
-    // Optionally, you can add more details here, like company
-    // document.getElementById('employeeCompany').innerText = employeeData.company;
+    document.getElementById("editedfirstname").innerText = editedEmployee.employeefirstName;
+    document.getElementById("editedLastName").innerText = editedEmployee.employeeDesignation;
+    document.getElementById("passportNo").innerText = personalInfo.passportNo;
+    document.getElementById("passportExpirydate").innerText = personalInfo.passportExpirydate;
+    document.getElementById("personalId").innerText = personalInfo.personalId;
+    document.getElementById("telephone").innerText = personalInfo.telephone;
+    document.getElementById("familyName").innerText=requestData.name;
+    document.getElementById("relationship").innerText=requestData.relationship
   }
 </script>
-
-</html>

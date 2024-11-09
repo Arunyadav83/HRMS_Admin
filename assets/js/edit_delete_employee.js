@@ -1,6 +1,5 @@
 // Function to append employee cards with edit and delete buttons
 
-
 function formatDate(dateString) {
   // Split the date string assuming it's in the format dd-MM-yyyy
   const [day, month, year] = dateString.split("-");
@@ -121,32 +120,32 @@ function deleteEmployee(employeeId) {
     });
 }
 
-function editEmployee(employeeId) {
-  // Fetch employee data from the server
-  fetch(`http://localhost:8081/api/employee/${employeeId}`)
-    .then(response => response.json())
-    .then(employee => {
-      // Populate the modal with employee data
-      document.getElementById("editedfirstname").value = employee.employeefirstName;
-      document.getElementById("editedLastName").value = employee.employeeLastName;
-      document.getElementById("editedusername").value = employee.employeeUsername;
-      document.getElementById("editedemail").value = employee.employeeEmail;
-      document.getElementById("editedpassword").value = employee.employeePassword;
-      document.getElementById("editednumber").value = employee.employeePhonenumber;
-      document.getElementById("editedempid").value = employee.employeeId;
-      document.getElementById("editedcompany").value = employee.employeeCompany;
-      document.getElementById("editeddepartment").value = employee.employeeDepartment;
-      document.getElementById("editeddesignation").value = employee.employeeDesignation;
+// function editEmployee(employeeId) {
+//   // Fetch employee data from the server
+//   fetch(`http://localhost:8081/api/employee/${employeeId}`)
+//     .then(response => response.json())
+//     .then(employee => {
+//       // Populate the modal with employee data
+//       document.getElementById("editedfirstname").value = employee.employeefirstName;
+//       document.getElementById("editedLastName").value = employee.employeeLastName;
+//       document.getElementById("editedusername").value = employee.employeeUsername;
+//       document.getElementById("editedemail").value = employee.employeeEmail;
+//       document.getElementById("editedpassword").value = employee.employeePassword;
+//       document.getElementById("editednumber").value = employee.employeePhonenumber;
+//       document.getElementById("editedempid").value = employee.employeeId;
+//       document.getElementById("editedcompany").value = employee.employeeCompany;
+//       document.getElementById("editeddepartment").value = employee.employeeDepartment;
+//       document.getElementById("editeddesignation").value = employee.employeeDesignation;
       
-      // Show the modal
-      const editModal = new bootstrap.Modal(document.getElementById('edit_employee'));
-      editModal.show();
-    })
-    .catch(error => {
-      console.error("Error fetching employee data: ", error);
-      alert("Failed to fetch employee details");
-    });
-}
+//       // Show the modal
+//       const editModal = new bootstrap.Modal(document.getElementById('edit_employee'));
+//       editModal.show();
+//     })
+//     .catch(error => {
+//       console.error("Error fetching employee data: ", error);
+//       alert("Failed to fetch employee details");
+//     });
+// }
 
 // Function to handle the edit button click
 function handleEditButtonClick(employeeId) {
@@ -154,4 +153,4 @@ function handleEditButtonClick(employeeId) {
 }
 
 // Example usage: Call handleEditButtonClick with the employeeId when needed
-// handleEditButtonClick(employeeId);
+ //handleEditButtonClick(employeeId);
