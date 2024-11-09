@@ -8,7 +8,11 @@ document
       password: document.getElementById("password").value,
     };
 
+<<<<<<< HEAD
     fetch("http://localhost:8081/api/admin/login", {
+=======
+    fetch("http://localhost:8082/api/admin/login", {
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
       method: "POST",
       headers: {
         "Content-Type": "application/json",

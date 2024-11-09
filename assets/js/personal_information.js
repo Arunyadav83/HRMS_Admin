@@ -1,5 +1,9 @@
 // Add event listener to the form for submission
+<<<<<<< HEAD
 document.getElementById("personal_information").addEventListener("submit", function (event) {
+=======
+document.getElementById("personalInfoForm").addEventListener("submit", function (event) {
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
     event.preventDefault(); // Prevent form from reloading the page
 
     // Function to format date from dd-MM-yyyy to ISO (yyyy-MM-dd)
@@ -25,7 +29,11 @@ document.getElementById("personal_information").addEventListener("submit", funct
     console.log("Employee ID: ", employeeId);
 
     // Send data to the server
+<<<<<<< HEAD
     fetch(`http://localhost:8081/api/personal/${employeeId}`, {
+=======
+    fetch(`http://localhost:8082/api/personal/${employeeId}`, {
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
         method: "POST",
         headers: {
             "Content-Type": "application/json",

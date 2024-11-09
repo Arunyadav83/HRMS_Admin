@@ -1,0 +1,136 @@
+
+/*Assignee styles*/
+
+.field-group, .tab-group {
+    /* margin-bottom: 15px; */
+  }
+  
+  .input-box {
+    border: 1px solid #d6e3f4;
+    padding: 10px;
+    background-color: #e7f3fb;
+    display: inline-block;
+    border-radius: 5px;
+   
+    /* width: 60%; */
+   
+  }
+  
+  .name-tag {
+    font-size: 14px;
+    color: #0d6efd;
+    margin-right: 10px;
+  }
+  
+  .add-link, .change-link {
+    color: #0d6efd;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .tab-link {
+    color: #6c757d;
+    text-decoration: none;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .tab-link:hover {
+    text-decoration: underline;
+  }
+  
+  .toggle-fields {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .input-box {
+      width: 100%;
+    }
+  }
+  
+  
+  /*media queries*/
+  
+  /* For small devices (mobile phones, 600px and below) */
+  @media (max-width: 600px) {
+    .input-box {
+      width: 100%;
+      padding: 5px; /* Adjust padding for smaller screens */
+      font-size: 12px; /* Reduce font size */
+    }
+  
+    .field-group, .tab-group {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .toggle-fields {
+      width: 100%;
+    }
+  
+    .field {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* For tablets and medium devices (600px to 768px) */
+  @media (min-width: 601px) and (max-width: 768px) {
+    .input-box {
+      width: 80%;
+      padding: 8px; /* Slight padding adjustment */
+      font-size: 14px;
+    }
+  
+    .field-group {
+      width: 100%;
+    }
+  
+    .tab-group {
+      text-align: left;
+    }
+  
+    .toggle-fields {
+      width: 100%;
+    }
+  
+    .field {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  /* For larger screens (desktops) */
+  @media (min-width: 769px) {
+    .input-box {
+      /* width: 60%; */
+      padding: 10px;
+    }
+  
+    .field {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .toggle-fields {
+      /* s */
+    }
+  
+    .tab-group {
+      text-align: left;
+    }
+  }
+  
+  
+  
+  /* End Assignee styles*/
+  
+  
+  
+  
+  
+  
+  
+  
+  

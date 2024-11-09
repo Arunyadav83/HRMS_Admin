@@ -55,7 +55,7 @@ document
     
     
     // Send POST request with the employee data to the backend
-    fetch("http://localhost:8081/api/employee", {
+    fetch("http://localhost:8082/api/employee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Send data as JSON
@@ -67,6 +67,8 @@ document
         console.log("Employee added:", data);
         appendEmployeeCard(data); // Append the new employee card to the grid
         document.getElementById("employee_form").reset(); // Reset the form
+        const modalElement = bootstrap.Modal.getInstance(document.getElementById('add_employee'));
+        modalElement.hide();
       })
       .catch((error) => {
         console.error("Error:", error);

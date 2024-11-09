@@ -94,7 +94,7 @@ function appendEmployeeCard(employee) {
 
 // Function to delete an employee
 function deleteEmployee(employeeId) {
-  fetch(`http://localhost:8081/api/employee/${employeeId}`, {
+  fetch(`http://localhost:8082/api/employee/${employeeId}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -147,10 +147,10 @@ function deleteEmployee(employeeId) {
 //     });
 // }
 
-// Function to handle the edit button click
-function handleEditButtonClick(employeeId) {
-  fetchEmployeeData(employeeId);
-}
+// // Function to handle the edit button click
+// function handleEditButtonClick(employeeId) {
+//   fetchEmployeeData(employeeId);
+// }
 
 // Example usage: Call handleEditButtonClick with the employeeId when needed
  //handleEditButtonClick(employeeId);

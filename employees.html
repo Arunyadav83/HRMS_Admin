@@ -52,7 +52,11 @@
       </a>
 
       <div class="page-title-box">
+<<<<<<< HEAD
         <h3>Ultrakey It Solutions</h3>
+=======
+        <h3>Ultrakey IT Solutions</h3>
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
       </div>
 
       <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
@@ -336,17 +340,8 @@
               <li class="menu-title">
                 <span>Main</span>
               </li>
-              <li class="submenu">
-                <a href="#"><i class="la la-dashboard"></i> <span> Dashboard</span>
-                  <span class="menu-arrow"></span></a>
-                <ul>
-                  <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                  <li>
-                    <a href="employee-dashboard.html">Employee Dashboard</a>
-                  </li>
+              <li><a href="admin-dashboard.html"><i class="la la-user"></i><span>Admin Dashboard</span></a></li>
 
-                </ul>
-              </li>
               <li class="submenu">
                 <a href="#"><i class="la la-cube"></i> <span> Apps</span>
                   <span class="menu-arrow"></span></a>
@@ -380,10 +375,10 @@
                   <li>
                     <a href="leaves-employee.html">Leaves (Employee)</a>
                   </li>
-                  <li><a href="leave-settings.html">Leave Settings</a></li>
-                  <li><a href="attendance.html">Attendance (Admin)</a></li>
+                   
+                   <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
                   <li>
-                    <a href="attendance-employee.html">Attendance (Employee)</a>
+                    <!-- <a href="attendance-employee.html">Attendance (Employee)</a> -->
                   </li>
                   <li><a href="departments.html">Departments</a></li>
                   <li><a href="designations.html">Designations</a></li>
@@ -643,11 +638,16 @@
             <li class="menu-title">
               <span>Main</span>
             </li>
+<<<<<<< HEAD
            <li>
                 <a href="admin-dashboard.html"
                   ><i class="la la-dashcube"></i> <span> Admin Dashboard</span>
                  </a>
               </li>
+=======
+            <li><a href="admin-dashboard.html"><i class="la la-user"></i><span>Admin Dashboard</span></a></li>
+
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
             <li class="submenu">
               <a href="#"><i class="la la-cube"></i> <span> Apps</span>
                 <span class="menu-arrow"></span></a>
@@ -681,10 +681,10 @@
                 <li><a href="holidays.html">Holidays</a></li>
 
                 <li><a href="leaves-employee.html">Leaves (Employee)</a></li>
-                <li><a href="leave-settings.html">Leave Settings</a></li>
-                <li><a href="attendance.html">Attendance (Admin)</a></li>
+                 
+                 <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
                 <li>
-                  <a href="attendance-employee.html">Attendance (Employee)</a>
+                  <!-- <a href="attendance-employee.html">Attendance (Employee)</a> -->
                 </li>
                 <li><a href="departments.html">Departments</a></li>
                 <li><a href="designations.html">Designations</a></li>
@@ -959,10 +959,8 @@
             <div class="tab-pane fade" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
               <p>Dashboard</p>
               <ul>
-                <li><a href="admin-dashboard.html">Admin Dashboard</a></li>
-                <li>
-                  <a href="employee-dashboard.html">Employee Dashboard</a>
-                </li>
+                <li><a href="admin-dashboard.html"><i class="la la-user"></i><span>Admin Dashboard</span></a></li>
+
 
               </ul>
             </div>
@@ -1005,10 +1003,10 @@
                 <li><a href="holidays.html">Holidays</a></li>
 
                 <li><a href="leaves-employee.html">Leaves (Employee)</a></li>
-                <li><a href="leave-settings.html">Leave Settings</a></li>
-                <li><a href="attendance.html">Attendance (Admin)</a></li>
+                 
+                 <!-- <li><a href="attendance.html">Attendance (Admin)</a></li> -->
                 <li>
-                  <a href="attendance-employee.html">Attendance (Employee)</a>
+                  <!-- <a href="attendance-employee.html">Attendance (Employee)</a> -->
                 </li>
                 <li><a href="departments.html">Departments</a></li>
                 <li><a href="designations.html">Designations</a></li>
@@ -1516,20 +1514,28 @@
                   </div>
                   <div class="col-sm-6">
                     <div class="input-block mb-3">
+                      <label class="col-form-label">Leaves </label>
+                      <input class="form-control" type="text" name="leaves" id="leaves" />
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="input-block mb-3">
                       <label class="col-form-label">Phone </label>
                       <input class="form-control" type="tel" name="employeePhonenumber" id="phonenumber" />
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="input-block mb-3">
-                      <label class="col-form-label">Company</label>
-                      <select class="select" id="company" name="employeeCompany">
+                      <label class="col-form-label" >Company</label>
+                      <input class="form-control" type="text" name="company" id="company" />
+
+                      <!-- <select class="select" id="company" name="employeeCompany">
                         <option>UltrakeyIT Solutions</option>
                         <option>Tata Consultancy Services Limited</option>
                         <option>Microsoft Corporation</option>
                         <option>Wipro Limited</option>
                         <option>Google LLC</option>
-                      </select>
+                      </select> -->
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -1566,8 +1572,10 @@
                   </div>
 
                 </div>
-                <!-- <div class="table-responsive m-t-15">
-                    <table class="table table-striped custom-table">
+               <div class="submit-section">
+                  <button class="btn btn-primary submit-btn">Submit</button>
+                </div>
+                    <!-- <table class="table table-striped custom-table">
                       <thead>
                         <tr>
                           <th>Module Permission</th>
@@ -1989,11 +1997,9 @@
                           </td>
                         </tr>
                       </tbody>
-                    </table>
-                  </div> -->
-                <div class="submit-section">
-                  <button class="btn btn-primary submit-btn">Submit</button>
-                </div>
+                    </table> -->
+                  </div> 
+               
               </form>
             </div>
           </div>
@@ -2074,7 +2080,11 @@
                   <div class="col-sm-6">
                     <div class="input-block mb-3">
                       <label class="col-form-label">Address<span class="text-danger">*</span></label>
+<<<<<<< HEAD
                       <input type="text" class="form-control" id="empid" name="address" itemid="editedaddress"  />
+=======
+                      <input type="text" class="form-control" id="editedaddress" name="address"  />
+>>>>>>> 869f502711416de6674617e5397e5c2ffac979bc
                     </div>
                   </div>
 
