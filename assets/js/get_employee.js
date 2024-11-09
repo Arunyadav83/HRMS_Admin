@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function fetchEmployees() {
-  fetch("http://localhost:8082/api/employee", {
+  fetch("http://localhost:8081/api/employee", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -18,7 +18,7 @@ function fetchEmployees() {
       }
     })
     .then((employees) => {
-      // console.log("Employees fetched: ", employees);
+      console.log("Employees fetched: ", employees);
       // Loop through the employee list and append each employee card
       employees.forEach(appendEmployeeCard);
     })
@@ -87,7 +87,7 @@ function createButton(parent, text, btnClass, onClickHandler) {
 // Function to delete an employee
 function deleteEmployee(employeeId, employeeCard) {
   if (confirm("Are you sure you want to delete this employee?")) {
-    fetch(`http://localhost:8082/api/employee/${employeeId}`, {
+    fetch(`http://localhost:8081/api/employee/${employeeId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -176,8 +176,6 @@ document.querySelector('.editbtn').addEventListener('click', function (e) {
    console.log(editedEmployee);
   // Send the updated employee data to the server using PUT
   const employeeId = document.getElementById("editedempid").value;
-  console.log(employeeId);
-  
   fetch(`http://localhost:8082/api/employee/${employeeId}`, {
     method: "PUT",
     headers: {

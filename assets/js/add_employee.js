@@ -28,8 +28,6 @@ document
     const Gender = document.getElementById("gender").value;
     const Address = document.getElementById("address").value;
     const department = document.getElementById("department").value;
-    const leaves = document.getElementById("leaves").value;
-   // const profileImage=document.getElementById("image").value;
     // const  adminId= localStorage.getItem("adminId")
     // console.log(adminId);
     // Create new employee object with the form data
@@ -49,8 +47,6 @@ document
       dateofbirth: dateofbirth,
       address: Address,
       gender : Gender,
-      annualLeaves:leaves
-     // profileImage:profileImage
       // admin:adminId
         };
 

@@ -1,4 +1,4 @@
-document.getElementById('educationInfo').addEventListener('submit', async function (event) {
+document.getElementById('educationInfo').addEventListener('submit', async function(event) {
     event.preventDefault();
 
     // Function to format the date from dd-MM-yyyy to yyyy-MM-dd
@@ -17,19 +17,19 @@ document.getElementById('educationInfo').addEventListener('submit', async functi
     // Check if form elements exist and capture their values
     const institution = document.getElementById('institution')?.value || '';
     const subject = document.getElementById('subject')?.value || '';
-    const startingdate =formatDate( document.getElementById('startDate')?.value )|| '';
-    const completedate = formatDate(document.getElementById('endDate')?.value )|| '';
+    const startingDate = formatDate(document.getElementById('startDate')?.value) || '';
+    const completeDate = formatDate(document.getElementById('endDate')?.value) || '';
     const degree = document.getElementById('Degree')?.value || ''; // Degree should not be formatted as a date
     const grade = document.getElementById('Grade')?.value || '';
 
     // Collect form data into an object
-    const formData = {
-        institution,
-        subject,
-        startingdate,
-        completedate,
-        degree,
-        grade
+    const formData = { 
+        institution, 
+        subject, 
+        startingDate, 
+        completeDate, 
+        degree, 
+        grade 
     };
 
     console.log(formData);
@@ -38,10 +38,10 @@ document.getElementById('educationInfo').addEventListener('submit', async functi
 
     try {
         // Send POST request to the backend API
-        const response = await fetch(`http://localhost:8082/api/educationInformation/${employeeId}`, {
+        const response = await fetch(`http://localhost:8081/api/educationInformation/${employeeId}`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
+            headers: { 
+                'Content-Type': 'application/json' 
             },
             body: JSON.stringify(formData),
         });

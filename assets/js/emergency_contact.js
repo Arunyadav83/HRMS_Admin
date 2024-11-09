@@ -1,8 +1,8 @@
 document.getElementById('emergency_contact').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
   
-    const employeeId=localStorage.getItem('employeeId');
-    console.log(employeeId)
+    const personalId=localStorage.getItem('personalId');
+    console.log(personalId)
     // Fetch values from the form
     const primaryName = document.getElementById('primaryName').value;
     const primaryRelationship = document.getElementById('primaryRelationship').value;
@@ -23,7 +23,7 @@ document.getElementById('emergency_contact').addEventListener('submit', function
     };
   
     // Send the data to the server using POST method
-    fetch(`http://localhost:8082/api/emergencycontact/addcontact/${employeeId}`, {
+    fetch(`http://localhost:8081/api/emergencycontact/addcontact/${personalId}`, {
       method: 'POST', // Use POST method to send the data
       headers: {
         'Content-Type': 'application/json' // Ensure the request content type is JSON

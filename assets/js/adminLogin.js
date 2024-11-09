@@ -8,7 +8,7 @@ document
       password: document.getElementById("password").value,
     };
 
-    fetch("http://localhost:8082/api/admin/login", {
+    fetch("http://localhost:8081/api/admin/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,15 +25,10 @@ document
       .then((data) => {
         console.log("Login Successful:", data);
 
-        
-            
         // Optionally store data in local storage
-         localStorage.setItem('adminId', data.adminId); 
+         //localStorage.setItem("adminId", data.id); 
 
-        window.location.href = "admin-dashboard.html"; 
-        // window.location.href= `profile.html?id=${adminId}`;
-        
-        // Redirect to the admin dashboard
+        window.location.href = "admin-dashboard.html"; // Redirect to the admin dashboard
       })
       .catch((error) => {
         console.error("Error:", error);

@@ -1,20 +1,27 @@
-// Function to format date as 'dd-MM-yyyy'
-function formatDate(dateString) {
-    // Split the date string into components
-    const parts = dateString.split("-");
-    // Create a new date string in the "yyyy-MM-dd" format
-    return `${parts[2]}-${parts[1]}-${parts[0]}`; // year-month-day
-  }
-  
-
 document.querySelector('.submit-btn2').addEventListener('click', function (e) {
     // Prevent the default form submission behavior
     e.preventDefault();
 
+    // function formatDate(dateString) {
+    //     if (!dateString) {
+    //         return '';  // Return an empty string if the date is not provided
+    //     }
+    //     // Split the date string into components
+    //     const parts = dateString.split("-");
+    //     // Create a new date string in the "dd-MM-yyyy" format
+    //     return `${parts[2]}-${parts[1]}-${parts[0]}`; // day-month-year
+    // }
+
     // Get form data
     const familyName = document.getElementById('familyName').value.trim();
     const relationship = document.getElementById('relationship').value.trim();
-    const dateofbirth = formatDate(document.getElementById('birthday').value);
+    const dateofbirth = document.getElementById('birthday').value;
+
+    // if (!dateInput) {
+    //     alert('Please provide a valid date of birth.');
+    //     return;
+    // }
+
    // const dateofbirth = formatDate(dateInput); // Format date from the input
 
     const phone = document.getElementById('phone').value.trim();
@@ -38,7 +45,7 @@ document.querySelector('.submit-btn2').addEventListener('click', function (e) {
     console.log(requestData);
     
     // Send POST request using fetch
-    fetch(`http://localhost:8082/api/familyinformation/${employeeId}`, {  // Replace with your actual endpoint
+    fetch(`http://localhost:8081/api/familyinformation/${employeeId}`, {  // Replace with your actual endpoint
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

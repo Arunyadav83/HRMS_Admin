@@ -162,7 +162,7 @@
       </a>
 
       <div class="page-title-box">
-        <h3>Ultrakey IT Solutions</h3>
+        <h3>Ultrakey It Solutions</h3>
       </div>
 
       <a id="mobile_btn" class="mobile_btn" href="#sidebar"><i class="fa-solid fa-bars"></i></a>
@@ -1232,21 +1232,6 @@
             </div>
           </div>
         </div>
-
-
-        <!-- Toast Container -->
-<div class="tosat-alert end-0 p-3" style="z-index: 11">
-  <div id="liveToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="d-flex">
-          <div class="toast-body">
-              This is a success message in green!
-          </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-  </div>
-</div>
-
-
         <div class="tab-content">
           <div id="emp_profile" class="pro-overview tab-pane fade show active">
             <div class="row">
@@ -1254,24 +1239,9 @@
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
                     <h3 class="card-title">Personal Information
-                      <!-- Edit Button -->
-                      <div class="container">
-                        <a href="#" class="edit-icon">
-                          <i class="fa-solid fa-pencil"></i>
-                        </a>
-                        <div class="button-group">
-                          <div class="button-inn">
-                            <div class="d-flex flex-column" data-bs-toggle="offcanvas" data-bs-target="#personalInfoOffcanvas"
-                            aria-controls="personalInfoOffcanvas">
-                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
-                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
-                            </div>
-                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
-                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
-                          </div>
-                        </div>
-                      </div>
-
+                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#personal_info_modal">
+                        <i class="fa-solid fa-pencil"></i>
+                      </a>
                     </h3>
                     <ul class="personal-info">
                       <li>
@@ -1310,71 +1280,49 @@
                   </div>
                 </div>
               </div>
-           
+              
 
               <div class="col-md-6 d-flex">
                 <div class="card profile-box flex-fill">
                   <div class="card-body">
                     <h3 class="card-title">
                       Emergency Contact
-                      <!-- Edit Button -->
-                      <!-- <a href="#" class="edit-icon" data-bs-toggle="offcanvas"
-                        data-bs-target="#emergency_contact_offcanvas" aria-controls="emergency_contact_offcanvas">
+                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#emergency_contact_modal">
                         <i class="fa-solid fa-pencil"></i>
-                      </a> -->
-                      <div class="container">
-                        <a href="#" class="edit-icon">
-                          <i class="fa-solid fa-pencil"></i>
-                        </a>
-                        <div class="button-group">
-                          <div class="button-inn">
-                            <div class="d-flex flex-column" data-bs-toggle="offcanvas"
-                            data-bs-target="#emergency_contact_offcanvas" aria-controls="emergency_contact_offcanvas">
-                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
-                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
-                            </div>
-                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
-                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
-                          </div>
-                        </div>
-                      </div>
+                      </a>
                     </h3>
-
+              
                     <h5 class="section-title">Primary</h5>
                     <ul class="personal-info">
                       <li>
                         <div class="title">Name</div>
-                        <div class="text text-primary-name" id="primaryNameDisplay">John Doe</div> <!-- Dynamic -->
+                        <div class="text text-primary-name">John Doe</div> <!-- Dynamic -->
                       </li>
                       <li>
                         <div class="title">Relationship</div>
-                        <div class="text text-primary-relationship" id="primaryRelationshipDisplay">Father</div>
-                        <!-- Dynamic -->
+                        <div class="text text-primary-relationship">Father</div> <!-- Dynamic -->
                       </li>
                       <li>
                         <div class="title">Phone</div>
-                        <div class="text text-primary-phone" id="primaryphoneDisplay">9876543210</div> <!-- Dynamic -->
+                        <div class="text text-primary-phone">9876543210</div> <!-- Dynamic -->
                       </li>
                     </ul>
-
+              
                     <hr>
-
+              
                     <h5 class="section-title">Secondary</h5>
                     <ul class="personal-info">
                       <li>
                         <div class="title">Name</div>
-                        <div class="text text-secondary-name " id="secondaryNameDisplay">Karen Wills</div>
-                        <!-- Dynamic -->
+                        <div class="text text-secondary-name">Karen Wills</div> <!-- Dynamic -->
                       </li>
                       <li>
                         <div class="title">Relationship</div>
-                        <div class="text text-secondary-relationship" id="secondaryRelationshipDisplay">Brother</div>
-                        <!-- Dynamic -->
+                        <div class="text text-secondary-relationship">Brother</div> <!-- Dynamic -->
                       </li>
                       <li>
                         <div class="title">Phone</div>
-                        <div class="text text-secondary-phone" id="secondaryPhoneDisplay">9876543210</div>
-                        <!-- Dynamic -->
+                        <div class="text text-secondary-phone">9876543210</div> <!-- Dynamic -->
                       </li>
                     </ul>
                   </div>
@@ -1388,36 +1336,18 @@
                   <div class="card-body">
                     <h3 class="card-title">
                       Bank Information
-                      <!-- Edit Button -->
-                      <!-- <a href="#" class="edit-icon" data-bs-toggle="offcanvas" data-bs-target="#editBankInfoOffcanvas"
-                        aria-controls="editBankInfoOffcanvas">
+                      <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#editBankInfoModal">
                         <i class="fa-solid fa-pencil"></i>
-                      </a> -->
-                      <div class="container">
-                        <a href="#" class="edit-icon">
-                          <i class="fa-solid fa-pencil"></i>
-                        </a>
-                        <div class="button-group">
-                          <div class="button-inn">
-                            <div class="d-flex flex-column" data-bs-toggle="offcanvas" data-bs-target="#editBankInfoOffcanvas"
-                            aria-controls="personalInfoOffcanvas">
-                            <button class="add-btn" onclick="openOffCanvas('add')">Add</button>
-                            <button class="edit-btn" onclick="openOffCanvas('edit')">Edit</button>
-                            </div>
-                            <button class="delete-btn" id="toastButton" type="button" class="btn btn-primary" >Delete</button>
-                            <!-- <button id="toastButton" type="button" class="btn btn-primary">Show Green Toast Alert</button> -->
-                          </div>
-                        </div>
-                      </div>
+                      </a>
                     </h3>
                     <ul class="personal-info">
                       <li>
                         <div class="title">Bank Name</div>
-                        <div class="text" id="bankName"></div>
+                        <div class="text">ICICI Bank</div>
                       </li>
                       <li>
                         <div class="title">Bank Account No.</div>
-                        <div class="text" id="accountNumber"></div>
+                        <div class="text">159843014641</div>
                       </li>
                       <li>
                         <div class="title">IFSC Code</div>
@@ -1432,54 +1362,62 @@
                 </div>
               </div>
 
-              <!-- Offcanvas Component -->
-              <div id="editBankInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1"
-                aria-labelledby="offcanvasLabel" style="width: 50%;">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasLabel">Bank Information</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <form id="editBankForm">
-                    <div class="card">
-                      <div class="card-body">
-                        <h3 class="card-title">Bank Information</h3>
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="input-block mb-3">
-                              <label class="col-form-label">Bank Name <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="modal-bankName" required>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="input-block mb-3">
-                              <label class="col-form-label">Bank Account No. <span class="text-danger">*</span></label>
-                              <input class="form-control" type="text" id="modal-accountNumber" required>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="input-block mb-3">
-                              <label class="col-form-label">IFSC Code <span class="text-danger">*</span></label>
-                              <input class="form-control" type="text" id="modal-ifscCode" required>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="input-block mb-3">
-                              <label class="col-form-label">PAN No <span class="text-danger">*</span></label>
-                              <input class="form-control" type="text" id="modal-panNumber" required>
-                            </div>
-                          </div>
+              <!-- Edit Bank Information Modal -->
+              <div class="modal custom-modal fade" id="editBankInfoModal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title"> Bank Information</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!-- <a href="#" class="edit-icon" data-bs-toggle="modal" data-bs-target="#editBankInfoModal">
+                              <i class="fa-solid fa-pencil"></i>
+                            </a> -->
                         </div>
-                      </div>
+                        <div class="modal-body">
+                            <form id="editBankForm">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bank Information</h3>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Bank Name<span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="bankName" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">Bank Account No.<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="accountNumber" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">IFSC Code<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="ifscCode" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-block mb-3">
+                                                    <label class="col-form-label">PAN No<span class="text-danger">*</span></label>
+                                                    <input class="form-control" type="text" id="panNumber" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="submit-section">
+                                    <button type="button" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-
-                    <div class="bank-details-submit-button">
-                      <button type="button" class="btn btn-primary" id="bank-details-submit-button">Submit</button>
-                    </div>
-                  </form>
                 </div>
-              </div>
-
+            </div>
+            
 
               <div class="modal custom-modal fade" role="dialog">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -1498,7 +1436,7 @@
                             <div class="row">
                               <div class="col-md-6">
                                 <div class="input-block mb-3">
-                                  <label class="col-form-label">Primary secon Name<span class="text-danger">*</span></label>
+                                  <label class="col-form-label">Primary Name<span class="text-danger">*</span></label>
                                   <input type="text" class="form-control">
                                 </div>
                               </div>
@@ -1563,7 +1501,7 @@
                     </h3>
                     <div class="">
                       <table class="table table-nowrap">
-                        <thead class="Container">
+                        <thead> 
                           <tr>
                             <th>Name</th>
                             <th>Relationship</th>
@@ -2520,282 +2458,179 @@
         </div>
       </div>
 
-      <!-- Offcanvas Panel for Add/Edit -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="personalInfoOffcanvas"
-        aria-labelledby="personalInfoOffcanvasLabel" style="width: 60%;">
-        <div class="offcanvas-header">
-          <h3 id="offcanvasTitle">Add Personal Information</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+      <div id="personal_info_modal" class="modal custom-modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Personal Information</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="personal_information">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Passport No</label>
+                                    <input type="text" class="form-control" id="passportNo">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Passport Expiry Date</label>
+                                    <div class="cal-icon">
+                                        <input class="form-control datetimepicker" type="text" id="passportExpirydate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Tel</label>
+                                    <input class="form-control" type="text" id="telephone">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Nationality <span class="text-danger">*</span></label>
+                                    <input class="form-control" type="text" id="nationality">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Religion</label>
+                                    <div class="cal-icon">
+                                        <input class="form-control" type="text" id="religion">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Marital status <span class="text-danger">*</span></label>
+                                    <select class="select form-control" id="maritalStatus">
+                                        <option>-</option>
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">Employment of spouse</label>
+                                    <input class="form-control" type="text" id="employmentOfSpouse">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-block mb-3">
+                                    <label class="col-form-label">No. of children</label>
+                                    <input class="form-control" type="text" id="noOfChildren">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="submit-section">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="offcanvas-body">
-          <form id="personalInfoForm">
-           
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Personal Information</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Passport No.<span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="passportNoDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Passport ExpDate <span class="text-danger">*</span></label>
-                      <input class="form-control" type="date" id="passportExpDateDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Tel <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="telephoneDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Nationality <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="nationalityDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Religion <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="religionDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">maritalStatus <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="maritalStatusDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Employment of spouse <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="employmentOfSpouseDisplay" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">No. of children <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="noOfChildrenDisplay" required>
+    </div>
+    
+
+
+      <div id="family_info_modal" class="modal custom-modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Family Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="familyInfoTableBody">
+                <div class="form-scroll">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title">Family Member
+                        <a href="javascript:void(0);" class="delete-icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </a>
+                      </h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-block mb-3">
+                            <label class="col-form-label">Name <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="familyName" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3">
+                            <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="relationship" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3">
+                            <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
+                            <input class="form-control" type="date" id="birthday" required>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3">
+                            <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" id="phone" required>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="submit-section">
-                  <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                  <button type="button" class="btn btn-primary submit-btn2">Submit</button>
                 </div>
-              </div>
-            
+              </form>
             </div>
-           
-          </form>
-        </div>
-      </div>
-      <script>
-        function openOffCanvas(mode) {
-          const offcanvasTitle = document.getElementById("offcanvasTitle");
-          const form = document.getElementById("personalInfoForm");
-
-          // Clear the form for new data entry
-          form.reset();
-
-          if (mode === 'add') {
-            offcanvasTitle.textContent = "Add Personal Information";
-          }
-
-          // Show the offcanvas
-          const offcanvas = new bootstrap.Offcanvas(document.getElementById("personalInfoOffcanvas"));
-          offcanvas.show();
-        }
-
-        // Handle form submission
-        document.getElementById('personalInfoForm').addEventListener('submit', function (event) {
-          event.preventDefault();
-
-          // Collect data from the form fields
-          const newData = {
-            primaryName: document.getElementById("primaryName").value,
-            relationship: document.getElementById("relationship").value,
-            phone: document.getElementById("phone").value
-          };
-
-          alert("Data added successfully: " + JSON.stringify(newData));
-
-          // Hide the offcanvas after submission
-          const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('personalInfoOffcanvas'));
-          offcanvas.hide();
-        });
-
-      </script>
 
 
-      <!-- Offcanvas Component -->
-      <div id="familyInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
-        style="width: 50%;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Family Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <form id="familyInfoTableBody">
-            <div class="form-scroll">
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title">Family Member
-                    <a href="javascript:void(0);" class="delete-icon">
-                      <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                  </h3>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="input-block mb-3">
-                        <label class="col-form-label">Name <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" id="familyName" required>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3">
-                        <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" id="relationship" required>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3">
-                        <label class="col-form-label">Date of birth <span class="text-danger">*</span></label>
-                        <input class="form-control" type="date" id="birthday" required>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3">
-                        <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                        <input class="form-control" type="text" id="phone" required>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="submit-section">
-              <button type="button" class="btn btn-primary submit-btn2">Submit</button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
 
 
 
-      <!-- Offcanvas Component -->
-      <div id="emergency_contact_offcanvas" class="offcanvas offcanvas-end" tabindex="-1"
-        aria-labelledby="offcanvasLabel" style="width: 60%;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Emergency Contact</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <form id="emergency_contact">
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Primary Contact</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Primary Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="primaryName" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="primaryRelationship" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="primaryPhone" required>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <div id="emergency_contact_modal" class="modal custom-modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Personal Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
-
-            <div class="card">
-              <div class="card-body">
-                <h3 class="card-title">Secondary Contact</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Secondary Name <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="secondaryName" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="secondaryRelationship" required>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="input-block mb-3">
-                      <label class="col-form-label">Phone <span class="text-danger">*</span></label>
-                      <input class="form-control" type="text" id="secondaryPhone" required>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="submit-section">
-              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-
-
-      <!-- Offcanvas Component -->
-      <div id="educationInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
-        style="width: 60%;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Education Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <form id="educationInfo">
-            <div class="form-scroll">
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title">Education Information</h3>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <input type="text" class="form-control floating" id="institution" name="institution" required>
-                        <label class="focus-label">Institution</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <input type="text" class="form-control floating" id="subject" name="subject" required>
-                        <label class="focus-label">Subject</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <div class="cal-icon">
-                          <input type="text" class="form-control floating datetimepicker" id="startDate"
-                            name="startDate" required>
+            <div class="modal-body">
+              <form id="emergency_contact">
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Primary Contact</h3>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Primary Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="primaryName" required>
                         </div>
-                        <label class="focus-label">Starting Date</label>
                       </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <div class="cal-icon">
-                          <input type="text" class="form-control floating datetimepicker" id="endDate" name="endDate"
-                            required>
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                          <input class="form-control" type="text" id="primaryRelationship" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                          <input class="form-control" type="text" id="primaryPhone" required>
                         </div>
                         <label class="focus-label">Completion Date</label>
                       </div>
@@ -2814,7 +2649,37 @@
                     </div>
                   </div>
                 </div>
-              </div>
+      
+                <div class="card">
+                  <div class="card-body">
+                    <h3 class="card-title">Secondary Contact</h3>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Secondary Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" id="secondaryName" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Relationship <span class="text-danger">*</span></label>
+                          <input class="form-control" type="text" id="secondaryRelationship" required>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-block mb-3">
+                          <label class="col-form-label">Phone <span class="text-danger">*</span></label>
+                          <input class="form-control" type="text" id="secondaryPhone" required>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="submit-section">
+                  <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                </div>
+              </form>
             </div>
             <div class="submit-section">
               <button type="submit" class="btn btn-primary submit-btn">Submit</button>
@@ -2822,62 +2687,66 @@
           </form>
         </div>
       </div>
+      
 
 
-
-      <!-- Offcanvas Component -->
-      <div id="experienceInfoOffcanvas" class="offcanvas offcanvas-end" tabindex="-1" aria-labelledby="offcanvasLabel"
-        style="width: 60%;">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasLabel">Experience Information</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <form id="experienceInfo">
-            <div class="form-scroll">
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title">Experience Information
-                    <a href="javascript:void(0);" class="delete-icon">
-                      <i class="fa-regular fa-trash-can"></i>
-                    </a>
-                  </h3>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <input type="text" class="form-control floating" name="companyName" id="companyName"
-                          value="Digital Development Inc" required>
-                        <label class="focus-label">Company Name</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <input type="text" class="form-control floating" name="location" value="United States"
-                          id="location" required>
-                        <label class="focus-label">Location</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <input type="text" class="form-control floating" name="jobPosition" value="Web Developer"
-                          id="jobPosition" required>
-                        <label class="focus-label">Job Position</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <div class="cal-icon">
-                          <input type="text" class="form-control floating datetimepicker" name="periodFrom"
-                            id="periodFrom" value="01/07/2007" required>
+      <div id="education_info" class="modal custom-modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Education Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="educationInfo">
+                <div class="form-scroll">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title">Education Information</h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="institution" name="institution">
+                            <label class="focus-label">Institution</label>
+                          </div>
                         </div>
-                        <label class="focus-label">Period From</label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="input-block mb-3 form-focus">
-                        <div class="cal-icon">
-                          <input type="text" class="form-control floating datetimepicker" id="periodTo"
-                            value="08/06/2018" required>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="subject" name="subject">
+                            <label class="focus-label">Subject</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <div class="cal-icon">
+                              <input type="text" class="form-control floating datetimepicker" id="startDate"
+                                name="startDate">
+                            </div>
+                            <label class="focus-label">Starting Date</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <div class="cal-icon">
+                              <input type="text" class="form-control floating datetimepicker" id="endDate"
+                                name="endDate">
+                            </div>
+                            <label class="focus-label">Completion Date</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="Degree" name="degree">
+                            <label class="focus-label">Degree</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" id="Grade" name="grade">
+                            <label class="focus-label">Grade</label>
+                          </div>
                         </div>
                         <label class="focus-label">Period To</label>
                       </div>
@@ -2895,8 +2764,78 @@
 
 
 
+      <div id="experience_info" class="modal custom-modal fade" role="dialog">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Experience Information</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="experienceInfo">
+                <div class="form-scroll">
+                  <div class="card">
+                    <div class="card-body">
+                      <h3 class="card-title">Experience Information 
+                        <a href="javascript:void(0);" class="delete-icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </a>
+                      </h3>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" name="companyName" id="companyName"
+                              value="Digital Development Inc" required>
+                            <label class="focus-label">Company Name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" name="location" value="United States"
+                              id="location" required>
+                            <label class="focus-label">Location</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <input type="text" class="form-control floating" name="jobPosition" value="Web Developer"
+                              id="jobPosition" required>
+                            <label class="focus-label">Job Position</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <div class="cal-icon">
+                              <input type="text" class="form-control floating datetimepicker" name="periodFrom"
+                                id="periodFrom" value="01/07/2007" required>
+                            </div>
+                            <label class="focus-label">Period From</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="input-block mb-3 form-focus">
+                            <div class="cal-icon">
+                              <input type="text" class="form-control floating datetimepicker" id="periodTo"
+                                value="08/06/2018" required>
+                            </div>
+                            <label class="focus-label">Period To</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="submit-section">
+                  <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
   </div>
 
   <div class="settings-icon">
@@ -3292,151 +3231,33 @@
 <script src="assets/js/profile.js" defer></script>
 <script src="assets/js/family_information.js" defer></script>
 <!-- <script src="assets/js/personal_information.js"></script> -->
-<script src="assets/js/get_education.js"></script>
-<script src="assets/js/get_emergenycontact.js"></script>
-<script src="assets/js/get_experience.js"></script>
-<script src="assets/js/get_personal_information.js"></script>
-<script src="assets/js/get_education.js"></script>
-<script src="assets/js/get_bankinformation.js"></script>
-<script src="assets/js/get_familyinformation.js"></script>
-<script src="assets/js/experience.js" defer></script>
 <script src="assets/js/bank_informatiom.js"></script>
-<script src="assets/js/emergency_contact.js"></script>
-<script src="assets/js/personal_information.js" defer></script>
 <script src="assets/js/education_information.js" defer></script>
+<script src="assets/js/experience.js" defer></script>
+<script src="assets/js/personal_information.js" defer></script>
+<script src="assets/js/get_education.js"></script>
+<script src="assets/js/emergency_contact.js"></script>
+<script src="assets/js/get_emergenycontact.js"></script>
+<script src="assets/js/get_personal_information.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- //personal Information -->
-<script>
-  let isEdit = false;
-  let currentData = {};
-
-  function openOffCanvas(mode) {
-    const offCanvas = document.getElementById('personal_info_offcanvas');
-    const form = document.getElementById('dataForm');
-    if (mode === 'add') {
-      form.reset();
-      isEdit = false;
-    } else if (mode === 'edit' && currentData.passportNo) {
-      document.getElementById('passportNo').value = currentData.passportNo;
-      document.getElementById('passportExpiry').value = currentData.passportExpiry;
-      document.getElementById('tel').value = currentData.tel;
-      document.getElementById('religion').value = currentData.religion;
-      document.getElementById('nationality').value = currentData.nationality;
-      document.getElementById('maritalStatus').value = currentData.maritalStatus;
-      document.getElementById('employmentSpouse').value = currentData.employmentSpouse;
-      document.getElementById('childrenNo').value = currentData.childrenNo;
-      isEdit = true;
-    } else {
-      alert('No data to edit');
-      return;
-    }
-    offCanvas.classList.add('active');
-  }
-
-  function closeOffCanvas() {
-    document.getElementById('personal_info_offcanvas').classList.remove('active');
-  }
-
-  function saveData(event) {
-    event.preventDefault();
-    currentData = {
-      passportNo: document.getElementById('passportNo').value,
-      passportExpiry: document.getElementById('passportExpiry').value,
-      tel: document.getElementById('tel').value,
-      religion: document.getElementById('religion').value,
-      nationality: document.getElementById('nationality').value,
-      maritalStatus: document.getElementById('maritalStatus').value,
-      employmentSpouse: document.getElementById('employmentSpouse').value,
-      childrenNo: document.getElementById('childrenNo').value
-    };
-    document.getElementById('dataItem').innerHTML = `
-<strong>Passport No:</strong> ${currentData.passportNo}<br>
-<strong>Passport Expiry:</strong> ${currentData.passportExpiry}<br>
-<strong>Tel:</strong> ${currentData.tel}<br>
-<strong>Religion:</strong> ${currentData.religion}<br>
-<strong>Nationality:</strong> ${currentData.nationality}<br>
-<strong>Marital Status:</strong> ${currentData.maritalStatus}<br>
-<strong>Employment of Spouse:</strong> ${currentData.employmentSpouse}<br>
-<strong>No. of Children:</strong> ${currentData.childrenNo}
-`;
-    closeOffCanvas();
-  }
-
-  function deleteData() {
-    const dataItem = document.getElementById('dataItem');
-    if (currentData.passportNo) {
-      currentData = {};
-      dataItem.innerHTML = 'No data available';
-      alert('Data deleted!');
-    } else {
-      alert('No data to delete!');
-    }
-  }
-</script>
+<script src="assets/js/get_familyinformation.js"></script>
 
 <script>
-  // Retrieve data from localStorage
+
   const newEmployee = JSON.parse(localStorage.getItem('newEmployee'));
   const personalInfo = JSON.parse(localStorage.getItem('personalInfo'));
-  const requestData = JSON.parse(localStorage.getItem('requestData'));
-  const adminLogin = JSON.parse(localStorage.getItem('adminLogin'));
-  const department = JSON.parse(localStorage.getItem('department'));
-  const haliday = JSON.parse(localStorage.getItem('haliday'));
-  const editedEmployee = JSON.parse(localStorage.getItem('editedEmployee')); // If using editedEmployee
-  const designationData = JSON.parse(localStorage.getItem('designationData'))
+   const requestData=JSON.parse(localStorage.getItem('requestData'))
 
-  // Ensure values are defined and accessible before using
-  if (newEmployee || editedEmployee || personalInfo || requestData || adminLogin || haliday || designationData) {
-    // Use the retrieved data to populate HTML elements, checking that each item is not null or undefined
-    if (newEmployee) {
-      document.getElementById('firstname').innerText = newEmployee.employeefirstName;
-      document.getElementById('designation').innerText = newEmployee.employeeDesignation;
-    }
-
-    if (editedEmployee) {
-      document.getElementById("editedfirstname").innerText = editedEmployee.employeefirstName;
-      document.getElementById("editedLastName").innerText = editedEmployee.employeeDesignation;
-    }
-
-    if (personalInfo) {
-      document.getElementById("passportNo").innerText = personalInfo.passportNo;
-      document.getElementById("passportExpirydate").innerText = personalInfo.passportExpirydate;
-      document.getElementById("personalId").innerText = personalInfo.personalId;
-      document.getElementById("telephone").innerText = personalInfo.telephone;
-    }
-
-    if (requestData) {
-      document.getElementById("familyName").innerText = requestData.name;
-      document.getElementById("relationship").innerText = requestData.relationship;
-    }
-
-    if (adminLogin) {
-      document.getElementById('email').innerText = adminLogin.email;
-      document.getElementById("password").innerText = adminLogin.password; // Note corrected spelling to "password"
-    }
-
-    if (department) {
-      document.getElementById("departmentName").innerText = department.departmentName;
-    }
-
-    if (haliday) {
-      document.getElementById('halidayName').innerText = haliday.halidayName;
-      document.getElementById('halidayDate').innerText = haliday.halidayDate;
-    }
-    if (designationData) {
-      document.getElementById('designationName').innerText = designationData.designationName;
-      document.getElementById('departmentName').innerText = designationData.departmentName;
-    }
+  if (newEmployee | editedEmployee | personalInfo||requestData) {
+    document.ElementById('firstname').innerText = newEmployee.employeefirstName;
+    document.getElementById('designation').innerText = newEmployee.employeeDesignation;
+    document.getElementById("editedfirstname").innerText = editedEmployee.employeefirstName;
+    document.getElementById("editedLastName").innerText = editedEmployee.employeeDesignation;
+    document.getElementById("passportNo").innerText = personalInfo.passportNo;
+    document.getElementById("passportExpirydate").innerText = personalInfo.passportExpirydate;
+    document.getElementById("personalId").innerText = personalInfo.personalId;
+    document.getElementById("telephone").innerText = personalInfo.telephone;
+    document.getElementById("familyName").innerText=requestData.name;
+    document.getElementById("relationship").innerText=requestData.relationship
   }
-</script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-    document.getElementById('toastButton').addEventListener('click', function() {
-        var toast = new bootstrap.Toast(document.getElementById('liveToast'));
-        toast.show();
-    });
 </script>

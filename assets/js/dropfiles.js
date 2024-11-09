@@ -2,7 +2,7 @@
     'use strict';
 
     // UPLOAD CLASS DEFINITION
-    // ======================
+    // =
 
     var dropZone = document.getElementById('drop-zone');
     var uploadForm = document.getElementById('js-upload-form');
